@@ -1,4 +1,4 @@
-package com.neo.indent.entity;
+package com.onlinebookshop.indent.entity;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.Date;

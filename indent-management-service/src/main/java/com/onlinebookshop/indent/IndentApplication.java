@@ -1,4 +1,4 @@
-package com.neo.indent;
+package com.onlinebookshop.indent;
 
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
@@ -9,7 +9,7 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
 @EnableDiscoveryClient
 @SpringBootApplication
-@MapperScan("com.neo.indent.mapper")
+@MapperScan("com.onlinebookshop.indent.mapper")
 public class IndentApplication {
 
     public static void main(String[] args) {

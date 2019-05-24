@@ -1,4 +1,4 @@
-package com.neo.indent.config;
+package com.onlinebookshop.indent.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

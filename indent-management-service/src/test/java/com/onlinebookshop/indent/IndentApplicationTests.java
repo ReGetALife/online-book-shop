@@ -1,4 +1,4 @@
-package com.neo.indent;
+package com.onlinebookshop.indent;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

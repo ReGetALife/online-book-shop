@@ -1,6 +1,6 @@
-package com.neo.indent.mapper;
+package com.onlinebookshop.indent.mapper;
 
-import com.neo.indent.entity.Indent;
+import com.onlinebookshop.indent.entity.Indent;
 import org.apache.ibatis.annotations.*;
 import org.springframework.stereotype.Repository;
 

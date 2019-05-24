@@ -1,8 +1,8 @@
-package com.neo.indent.controller;
+package com.onlinebookshop.indent.controller;
 
-import com.neo.indent.entity.Indent;
-import com.neo.indent.entity.ResponseMessage;
-import com.neo.indent.mapper.IndentMapper;
+import com.onlinebookshop.indent.entity.Indent;
+import com.onlinebookshop.indent.entity.ResponseMessage;
+import com.onlinebookshop.indent.mapper.IndentMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

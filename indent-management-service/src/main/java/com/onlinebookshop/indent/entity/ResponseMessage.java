@@ -1,6 +1,6 @@
-package com.neo.indent.entity;
+package com.onlinebookshop.indent.entity;
 
-import com.neo.indent.util.MakeResponse;
+import com.onlinebookshop.indent.util.MakeResponse;
 
 public class ResponseMessage<T> implements MakeResponse {
     private Integer status;

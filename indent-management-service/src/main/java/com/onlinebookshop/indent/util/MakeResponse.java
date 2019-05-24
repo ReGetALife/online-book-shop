@@ -1,7 +1,7 @@
-package com.neo.indent.util;
+package com.onlinebookshop.indent.util;
 
 
-import com.neo.indent.entity.ResponseMessage;
+import com.onlinebookshop.indent.entity.ResponseMessage;
 
 public interface MakeResponse {
     ResponseMessage success();
