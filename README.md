@@ -19,3 +19,7 @@ spring boot 参考资料：
 项目管理地址：
 
 [https://ones.ai/project/#/home/project](https://ones.ai/project/#/home/project)
+
+**restful api 设计指南**
+
+[http://www.ruanyifeng.com/blog/2014/05/restful_api.html](http://www.ruanyifeng.com/blog/2014/05/restful_api.html)
