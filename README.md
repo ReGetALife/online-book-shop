@@ -4,6 +4,12 @@
 
 layui 框架已经在源码里了，不用再另行安装。
 
+推荐使用jdk1.8。
+
+eureka服务注册和发现 [http://localhost:8761](http://localhost:8761)
+
+## references
+
 前端参考资料：
 
 [https://www.layui.com/doc/](https://www.layui.com/doc/)
@@ -11,6 +17,10 @@ layui 框架已经在源码里了，不用再另行安装。
 spring boot 参考资料：
 
 [https://spring.io/projects/spring-boot](https://spring.io/projects/spring-boot)
+
+[https://spring.io/projects/spring-cloud](https://spring.io/projects/spring-cloud)
+
+[eureka配置教程](http://www.heartthinkdo.com/?p=1933)
 
 接口管理地址：
 
