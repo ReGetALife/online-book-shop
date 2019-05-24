@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script type="text/javascript" src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="./layui/css/layui.css">
+    <script src="./layui/layui.js"></script>
+    <script src="./main.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="./main.css">
+</head>
+
+<body>
+    <!-- 让IE8/9支持媒体查询，从而兼容栅格 -->
+    <!--[if lt IE 9]>
+        <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
+        <script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <div id="top">
+        <ul class="layui-nav">
+            <li class="layui-nav-item">
+                <a href="." class="header layui-header">
+                    虚拟书店 <i class="layui-icon">&#xe68e;</i>
+                </a>
+            </li>
+            <li class="layui-nav-item">
+                <a herf="">我的订单</a>
+            </li>
+            <li class="layui-nav-item" lay-unselect="">
+                <a href="javascript:;">个人中心 <i class="layui-icon">&#xe66f;</i></a>
+                <dl class="layui-nav-child">
+                    <dd><a href="javascript:;">消息通知</a></dd>
+                    <dd><a href="javascript:;">账户设置</a></dd>
+                    <dd><a href="javascript:;">退出登录</a></dd>
+                </dl>
+            </li>
+        </ul>
+        <div class="layui-form" action="" id="search-form">
+            <div class="layui-form-item">
+                <label class="layui-form-label">搜索书籍 <i class="layui-icon">&#xe615;</i></label>
+                <div class="layui-input-block">
+                    <input type="text" name="title" required lay-verify="required" placeholder="请输入标题或作者"
+                        autocomplete="off" class="layui-input">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="layui-row" id="content">
+        <div class="layui-col-md3">
+            <div class="grid-demo grid-demo-bg1">
+
+                <ul class="layui-nav layui-nav-tree layui-inline" lay-shrink="all" style="margin-right: 10px;">
+                    <li class="layui-nav-item">
+                        <a href="javascript:;">分类一</a>
+                        <dl class="layui-nav-child">
+                            <dd><a href="javascript:;">子类一</a></dd>
+                            <dd><a href="javascript:;">子类二</a></dd>
+                            <dd><a href="javascript:;">子类三</a></dd>
+                            <dd><a href="">跳转项</a></dd>
+                        </dl>
+                    </li>
+                    <li class="layui-nav-item">
+                        <a href="javascript:;">分类二</a>
+                        <dl class="layui-nav-child">
+                            <dd><a href="">移动模块</a></dd>
+                            <dd><a href="">后台模版</a></dd>
+                            <dd><a href="">电商平台</a></dd>
+                        </dl>
+                    </li>
+                    <li class="layui-nav-item">
+                        <a href="javascript:;">分类二</a>
+                        <dl class="layui-nav-child">
+                            <dd><a href="">移动模块</a></dd>
+                            <dd><a href="">后台模版</a></dd>
+                            <dd><a href="">电商平台</a></dd>
+                        </dl>
+                    </li>
+                    <li class="layui-nav-item">
+                        <a href="javascript:;">分类二</a>
+                        <dl class="layui-nav-child">
+                            <dd><a href="">移动模块</a></dd>
+                            <dd><a href="">后台模版</a></dd>
+                            <dd><a href="">电商平台</a></dd>
+                        </dl>
+                    </li>
+                    <li class="layui-nav-item">
+                        <a href="javascript:;">分类二</a>
+                        <dl class="layui-nav-child">
+                            <dd><a href="">移动模块</a></dd>
+                            <dd><a href="">后台模版</a></dd>
+                            <dd><a href="">电商平台</a></dd>
+                        </dl>
+                    </li>
+                    <li class="layui-nav-item"><a href="">云市场</a></li>
+                    <li class="layui-nav-item"><a href="">社区</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="layui-col-md6">
+            <div class="layui-carousel" id="scroll">
+                <div carousel-item>
+                    <div><img src="http://img63.ddimg.cn/upload_img/00678/zsts/750x315-1558317845.jpg"></div>
+                    <div><img src="http://img62.ddimg.cn/upload_img/00087/geq/750x315_0522-1558522422.jpg"></div>
+                    <div><img src="http://img60.ddimg.cn/cuxiao/zxss750x315.jpg"></div>
+                    <div>条目4</div>
+                    <div>条目5</div>
+                </div>
+            </div>
+            <h3>新上书籍</h3>
+            <div class="layui-carousel" id="new-book">
+                <div carousel-item>
+                    <div>
+                        <table class="layui-table">
+                            <colgroup>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <a title="最初之前" href="http://product.dangdang.com/27862677.html">
+                                            <img src="http://img3m7.ddimg.cn/18/12/27862677-1_l_28.jpg" alt="最初之前">
+                                        </a>
+                                        <p><a title="最初之前" href="http://product.dangdang.com/27862677.html">最初之前</a></p>
+                                        <p>张皓宸，果麦文化 出品</p>
+                                        <p class="price">￥44.10 原价 ￥49.00</p>
+                                    </td>
+                                    <td>
+                                        <a title="最初之前" href="http://product.dangdang.com/27862677.html">
+                                            <img src="http://img3m7.ddimg.cn/18/12/27862677-1_l_28.jpg" alt="最初之前">
+                                        </a>
+                                        <p><a title="最初之前" href="http://product.dangdang.com/27862677.html">最初之前</a></p>
+                                        <p>张皓宸，果麦文化 出品</p>
+                                        <p class="price">￥44.10 原价 ￥49.00</p>
+                                    </td>
+                                    <td>
+                                        <a title="最初之前" href="http://product.dangdang.com/27862677.html">
+                                            <img src="http://img3m7.ddimg.cn/18/12/27862677-1_l_28.jpg" alt="最初之前">
+                                        </a>
+                                        <p><a title="最初之前" href="http://product.dangdang.com/27862677.html">最初之前</a></p>
+                                        <p>张皓宸，果麦文化 出品</p>
+                                        <p class="price">￥44.10 原价 ￥49.00</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a title="最初之前" href="http://product.dangdang.com/27862677.html">
+                                            <img src="http://img3m7.ddimg.cn/18/12/27862677-1_l_28.jpg" alt="最初之前">
+                                        </a>
+                                        <p><a title="最初之前" href="http://product.dangdang.com/27862677.html">最初之前</a></p>
+                                        <p>张皓宸，果麦文化 出品</p>
+                                        <p class="price">￥44.10 原价 ￥49.00</p>
+                                    </td>
+                                    <td>
+                                        <a title="最初之前" href="http://product.dangdang.com/27862677.html">
+                                            <img src="http://img3m7.ddimg.cn/18/12/27862677-1_l_28.jpg" alt="最初之前">
+                                        </a>
+                                        <p><a title="最初之前" href="http://product.dangdang.com/27862677.html">最初之前</a></p>
+                                        <p>张皓宸，果麦文化 出品</p>
+                                        <p class="price">￥44.10 原价 ￥49.00</p>
+                                    </td>
+                                    <td>
+                                        <a title="最初之前" href="http://product.dangdang.com/27862677.html">
+                                            <img src="http://img3m7.ddimg.cn/18/12/27862677-1_l_28.jpg" alt="最初之前">
+                                        </a>
+                                        <p><a title="最初之前" href="http://product.dangdang.com/27862677.html">最初之前</a></p>
+                                        <p>张皓宸，果麦文化 出品</p>
+                                        <p class="price">￥44.10 原价 ￥49.00</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                        <table class="layui-table">
+                            <colgroup>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <a title="最初之前" href="http://product.dangdang.com/27862677.html">
+                                            <img src="http://img3m7.ddimg.cn/18/12/27862677-1_l_28.jpg" alt="最初之前">
+                                        </a>
+                                        <p><a title="最初之前" href="http://product.dangdang.com/27862677.html">最初之前</a></p>
+                                        <p>张皓宸，果麦文化 出品</p>
+                                        <p class="price">￥44.10 原价 ￥49.00</p>
+                                    </td>
+                                    <td>
+                                        <a title="最初之前" href="http://product.dangdang.com/27862677.html">
+                                            <img src="http://img3m7.ddimg.cn/18/12/27862677-1_l_28.jpg" alt="最初之前">
+                                        </a>
+                                        <p><a title="最初之前" href="http://product.dangdang.com/27862677.html">最初之前</a></p>
+                                        <p>张皓宸，果麦文化 出品</p>
+                                        <p class="price">￥44.10 原价 ￥49.00</p>
+                                    </td>
+                                    <td>
+                                        <a title="最初之前" href="http://product.dangdang.com/27862677.html">
+                                            <img src="http://img3m7.ddimg.cn/18/12/27862677-1_l_28.jpg" alt="最初之前">
+                                        </a>
+                                        <p><a title="最初之前" href="http://product.dangdang.com/27862677.html">最初之前</a></p>
+                                        <p>张皓宸，果麦文化 出品</p>
+                                        <p class="price">￥44.10 原价 ￥49.00</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a title="最初之前" href="http://product.dangdang.com/27862677.html">
+                                            <img src="http://img3m7.ddimg.cn/18/12/27862677-1_l_28.jpg" alt="最初之前">
+                                        </a>
+                                        <p><a title="最初之前" href="http://product.dangdang.com/27862677.html">最初之前</a></p>
+                                        <p>张皓宸，果麦文化 出品</p>
+                                        <p class="price">￥44.10 原价 ￥49.00</p>
+                                    </td>
+                                    <td>
+                                        <a title="最初之前" href="http://product.dangdang.com/27862677.html">
+                                            <img src="http://img3m7.ddimg.cn/18/12/27862677-1_l_28.jpg" alt="最初之前">
+                                        </a>
+                                        <p><a title="最初之前" href="http://product.dangdang.com/27862677.html">最初之前</a></p>
+                                        <p>张皓宸，果麦文化 出品</p>
+                                        <p class="price">￥44.10 原价 ￥49.00</p>
+                                    </td>
+                                    <td>
+                                        <a title="最初之前" href="http://product.dangdang.com/27862677.html">
+                                            <img src="http://img3m7.ddimg.cn/18/12/27862677-1_l_28.jpg" alt="最初之前">
+                                        </a>
+                                        <p><a title="最初之前" href="http://product.dangdang.com/27862677.html">最初之前</a></p>
+                                        <p>张皓宸，果麦文化 出品</p>
+                                        <p class="price">￥44.10 原价 ￥49.00</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                        <table class="layui-table">
+                            <colgroup>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <a title="最初之前" href="http://product.dangdang.com/27862677.html">
+                                            <img src="http://img3m7.ddimg.cn/18/12/27862677-1_l_28.jpg" alt="最初之前">
+                                        </a>
+                                        <p><a title="最初之前" href="http://product.dangdang.com/27862677.html">最初之前</a></p>
+                                        <p>张皓宸，果麦文化 出品</p>
+                                        <p class="price">￥44.10 原价 ￥49.00</p>
+                                    </td>
+                                    <td>
+                                        <a title="最初之前" href="http://product.dangdang.com/27862677.html">
+                                            <img src="http://img3m7.ddimg.cn/18/12/27862677-1_l_28.jpg" alt="最初之前">
+                                        </a>
+                                        <p><a title="最初之前" href="http://product.dangdang.com/27862677.html">最初之前</a></p>
+                                        <p>张皓宸，果麦文化 出品</p>
+                                        <p class="price">￥44.10 原价 ￥49.00</p>
+                                    </td>
+                                    <td>
+                                        <a title="最初之前" href="http://product.dangdang.com/27862677.html">
+                                            <img src="http://img3m7.ddimg.cn/18/12/27862677-1_l_28.jpg" alt="最初之前">
+                                        </a>
+                                        <p><a title="最初之前" href="http://product.dangdang.com/27862677.html">最初之前</a></p>
+                                        <p>张皓宸，果麦文化 出品</p>
+                                        <p class="price">￥44.10 原价 ￥49.00</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a title="最初之前" href="http://product.dangdang.com/27862677.html">
+                                            <img src="http://img3m7.ddimg.cn/18/12/27862677-1_l_28.jpg" alt="最初之前">
+                                        </a>
+                                        <p><a title="最初之前" href="http://product.dangdang.com/27862677.html">最初之前</a></p>
+                                        <p>张皓宸，果麦文化 出品</p>
+                                        <p class="price">￥44.10 原价 ￥49.00</p>
+                                    </td>
+                                    <td>
+                                        <a title="最初之前" href="http://product.dangdang.com/27862677.html">
+                                            <img src="http://img3m7.ddimg.cn/18/12/27862677-1_l_28.jpg" alt="最初之前">
+                                        </a>
+                                        <p><a title="最初之前" href="http://product.dangdang.com/27862677.html">最初之前</a></p>
+                                        <p>张皓宸，果麦文化 出品</p>
+                                        <p class="price">￥44.10 原价 ￥49.00</p>
+                                    </td>
+                                    <td>
+                                        <a title="最初之前" href="http://product.dangdang.com/27862677.html">
+                                            <img src="http://img3m7.ddimg.cn/18/12/27862677-1_l_28.jpg" alt="最初之前">
+                                        </a>
+                                        <p><a title="最初之前" href="http://product.dangdang.com/27862677.html">最初之前</a></p>
+                                        <p>张皓宸，果麦文化 出品</p>
+                                        <p class="price">￥44.10 原价 ￥49.00</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <h3>热门书籍</h3>
+            <div class="layui-carousel" id="hot-book">
+                    <div carousel-item>
+                        <div>
+                            <table class="layui-table">
+                                <colgroup>
+                                    <col>
+                                    <col>
+                                    <col>
+                                    <col>
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <a title="最初之前" href="http://product.dangdang.com/27862677.html">
+                                                <img src="http://img3m7.ddimg.cn/18/12/27862677-1_l_28.jpg" alt="最初之前">
+                                            </a>
+                                            <p><a title="最初之前" href="http://product.dangdang.com/27862677.html">最初之前</a></p>
+                                            <p>张皓宸，果麦文化 出品</p>
+                                            <p class="price">￥44.10 原价 ￥49.00</p>
+                                        </td>
+                                        <td>
+                                            <a title="最初之前" href="http://product.dangdang.com/27862677.html">
+                                                <img src="http://img3m7.ddimg.cn/18/12/27862677-1_l_28.jpg" alt="最初之前">
+                                            </a>
+                                            <p><a title="最初之前" href="http://product.dangdang.com/27862677.html">最初之前</a></p>
+                                            <p>张皓宸，果麦文化 出品</p>
+                                            <p class="price">￥44.10 原价 ￥49.00</p>
+                                        </td>
+                                        <td>
+                                            <a title="最初之前" href="http://product.dangdang.com/27862677.html">
+                                                <img src="http://img3m7.ddimg.cn/18/12/27862677-1_l_28.jpg" alt="最初之前">
+                                            </a>
+                                            <p><a title="最初之前" href="http://product.dangdang.com/27862677.html">最初之前</a></p>
+                                            <p>张皓宸，果麦文化 出品</p>
+                                            <p class="price">￥44.10 原价 ￥49.00</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <a title="最初之前" href="http://product.dangdang.com/27862677.html">
+                                                <img src="http://img3m7.ddimg.cn/18/12/27862677-1_l_28.jpg" alt="最初之前">
+                                            </a>
+                                            <p><a title="最初之前" href="http://product.dangdang.com/27862677.html">最初之前</a></p>
+                                            <p>张皓宸，果麦文化 出品</p>
+                                            <p class="price">￥44.10 原价 ￥49.00</p>
+                                        </td>
+                                        <td>
+                                            <a title="最初之前" href="http://product.dangdang.com/27862677.html">
+                                                <img src="http://img3m7.ddimg.cn/18/12/27862677-1_l_28.jpg" alt="最初之前">
+                                            </a>
+                                            <p><a title="最初之前" href="http://product.dangdang.com/27862677.html">最初之前</a></p>
+                                            <p>张皓宸，果麦文化 出品</p>
+                                            <p class="price">￥44.10 原价 ￥49.00</p>
+                                        </td>
+                                        <td>
+                                            <a title="最初之前" href="http://product.dangdang.com/27862677.html">
+                                                <img src="http://img3m7.ddimg.cn/18/12/27862677-1_l_28.jpg" alt="最初之前">
+                                            </a>
+                                            <p><a title="最初之前" href="http://product.dangdang.com/27862677.html">最初之前</a></p>
+                                            <p>张皓宸，果麦文化 出品</p>
+                                            <p class="price">￥44.10 原价 ￥49.00</p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div>
+                            <table class="layui-table">
+                                <colgroup>
+                                    <col>
+                                    <col>
+                                    <col>
+                                    <col>
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <a title="最初之前" href="http://product.dangdang.com/27862677.html">
+                                                <img src="http://img3m7.ddimg.cn/18/12/27862677-1_l_28.jpg" alt="最初之前">
+                                            </a>
+                                            <p><a title="最初之前" href="http://product.dangdang.com/27862677.html">最初之前</a></p>
+                                            <p>张皓宸，果麦文化 出品</p>
+                                            <p class="price">￥44.10 原价 ￥49.00</p>
+                                        </td>
+                                        <td>
+                                            <a title="最初之前" href="http://product.dangdang.com/27862677.html">
+                                                <img src="http://img3m7.ddimg.cn/18/12/27862677-1_l_28.jpg" alt="最初之前">
+                                            </a>
+                                            <p><a title="最初之前" href="http://product.dangdang.com/27862677.html">最初之前</a></p>
+                                            <p>张皓宸，果麦文化 出品</p>
+                                            <p class="price">￥44.10 原价 ￥49.00</p>
+                                        </td>
+                                        <td>
+                                            <a title="最初之前" href="http://product.dangdang.com/27862677.html">
+                                                <img src="http://img3m7.ddimg.cn/18/12/27862677-1_l_28.jpg" alt="最初之前">
+                                            </a>
+                                            <p><a title="最初之前" href="http://product.dangdang.com/27862677.html">最初之前</a></p>
+                                            <p>张皓宸，果麦文化 出品</p>
+                                            <p class="price">￥44.10 原价 ￥49.00</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <a title="最初之前" href="http://product.dangdang.com/27862677.html">
+                                                <img src="http://img3m7.ddimg.cn/18/12/27862677-1_l_28.jpg" alt="最初之前">
+                                            </a>
+                                            <p><a title="最初之前" href="http://product.dangdang.com/27862677.html">最初之前</a></p>
+                                            <p>张皓宸，果麦文化 出品</p>
+                                            <p class="price">￥44.10 原价 ￥49.00</p>
+                                        </td>
+                                        <td>
+                                            <a title="最初之前" href="http://product.dangdang.com/27862677.html">
+                                                <img src="http://img3m7.ddimg.cn/18/12/27862677-1_l_28.jpg" alt="最初之前">
+                                            </a>
+                                            <p><a title="最初之前" href="http://product.dangdang.com/27862677.html">最初之前</a></p>
+                                            <p>张皓宸，果麦文化 出品</p>
+                                            <p class="price">￥44.10 原价 ￥49.00</p>
+                                        </td>
+                                        <td>
+                                            <a title="最初之前" href="http://product.dangdang.com/27862677.html">
+                                                <img src="http://img3m7.ddimg.cn/18/12/27862677-1_l_28.jpg" alt="最初之前">
+                                            </a>
+                                            <p><a title="最初之前" href="http://product.dangdang.com/27862677.html">最初之前</a></p>
+                                            <p>张皓宸，果麦文化 出品</p>
+                                            <p class="price">￥44.10 原价 ￥49.00</p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div>
+                            <table class="layui-table">
+                                <colgroup>
+                                    <col>
+                                    <col>
+                                    <col>
+                                    <col>
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <a title="最初之前" href="http://product.dangdang.com/27862677.html">
+                                                <img src="http://img3m7.ddimg.cn/18/12/27862677-1_l_28.jpg" alt="最初之前">
+                                            </a>
+                                            <p><a title="最初之前" href="http://product.dangdang.com/27862677.html">最初之前</a></p>
+                                            <p>张皓宸，果麦文化 出品</p>
+                                            <p class="price">￥44.10 原价 ￥49.00</p>
+                                        </td>
+                                        <td>
+                                            <a title="最初之前" href="http://product.dangdang.com/27862677.html">
+                                                <img src="http://img3m7.ddimg.cn/18/12/27862677-1_l_28.jpg" alt="最初之前">
+                                            </a>
+                                            <p><a title="最初之前" href="http://product.dangdang.com/27862677.html">最初之前</a></p>
+                                            <p>张皓宸，果麦文化 出品</p>
+                                            <p class="price">￥44.10 原价 ￥49.00</p>
+                                        </td>
+                                        <td>
+                                            <a title="最初之前" href="http://product.dangdang.com/27862677.html">
+                                                <img src="http://img3m7.ddimg.cn/18/12/27862677-1_l_28.jpg" alt="最初之前">
+                                            </a>
+                                            <p><a title="最初之前" href="http://product.dangdang.com/27862677.html">最初之前</a></p>
+                                            <p>张皓宸，果麦文化 出品</p>
+                                            <p class="price">￥44.10 原价 ￥49.00</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <a title="最初之前" href="http://product.dangdang.com/27862677.html">
+                                                <img src="http://img3m7.ddimg.cn/18/12/27862677-1_l_28.jpg" alt="最初之前">
+                                            </a>
+                                            <p><a title="最初之前" href="http://product.dangdang.com/27862677.html">最初之前</a></p>
+                                            <p>张皓宸，果麦文化 出品</p>
+                                            <p class="price">￥44.10 原价 ￥49.00</p>
+                                        </td>
+                                        <td>
+                                            <a title="最初之前" href="http://product.dangdang.com/27862677.html">
+                                                <img src="http://img3m7.ddimg.cn/18/12/27862677-1_l_28.jpg" alt="最初之前">
+                                            </a>
+                                            <p><a title="最初之前" href="http://product.dangdang.com/27862677.html">最初之前</a></p>
+                                            <p>张皓宸，果麦文化 出品</p>
+                                            <p class="price">￥44.10 原价 ￥49.00</p>
+                                        </td>
+                                        <td>
+                                            <a title="最初之前" href="http://product.dangdang.com/27862677.html">
+                                                <img src="http://img3m7.ddimg.cn/18/12/27862677-1_l_28.jpg" alt="最初之前">
+                                            </a>
+                                            <p><a title="最初之前" href="http://product.dangdang.com/27862677.html">最初之前</a></p>
+                                            <p>张皓宸，果麦文化 出品</p>
+                                            <p class="price">￥44.10 原价 ￥49.00</p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        <div class="layui-col-md3">
+            <h3>猜你喜欢</h3>
+            <h3>新书热卖</h3>
+            <h3>销量排行</h3>
+        </div>
+    </div>
+</body>
+
+</html>
