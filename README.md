@@ -22,6 +22,8 @@ spring boot 参考资料：
 
 [eureka配置教程](http://www.heartthinkdo.com/?p=1933)
 
+[spring cloud gateway 简单配置](http://cxytiandi.com/blog/detail/20430)
+
 接口管理地址：
 
 [http://139.199.75.41:3000/project/11/interface/api](http://139.199.75.41:3000/project/11/interface/api)
