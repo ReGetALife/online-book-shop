@@ -6,6 +6,8 @@ layui 框架已经在源码里了，不用再另行安装。
 
 推荐使用jdk1.8。
 
+api 统一返回 ResponseEntity，并设置恰当的状态码。
+
 eureka服务注册和发现 [http://localhost:8761](http://localhost:8761)
 
 ## references
@@ -23,6 +25,12 @@ spring boot 参考资料：
 [eureka配置教程](http://www.heartthinkdo.com/?p=1933)
 
 [spring cloud gateway 简单配置](http://cxytiandi.com/blog/detail/20430)
+
+[spring boot 操作mongodb](https://juejin.im/post/5afb9de8518825426c690307)
+
+[spring boot 常见 http 请求处理](https://blog.csdn.net/yunfeng482/article/details/79756233)
+
+[spring 自带 md5 加密](https://www.kancloud.cn/chenzs/spring-boot_create/829027)
 
 接口管理地址：
 

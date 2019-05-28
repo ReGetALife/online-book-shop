@@ -5,7 +5,7 @@ import org.springframework.data.annotation.Id;
 public class Account
 {
     @Id
-    private int accountId;
+    private String accountId;
     private String accountName;
     private String password;
 
@@ -19,15 +19,15 @@ public class Account
 
     private String avatar;
 
-    public int getPhone() {
+    public String getPhone() {
         return phone;
     }
 
-    public void setPhone(int phone) {
+    public void setPhone(String phone) {
         this.phone = phone;
     }
 
-    private int phone;
+    private String phone;
 
     public String getPassword() {
         return password;
@@ -37,11 +37,11 @@ public class Account
         this.password = password;
     }
 
-    public int getAccountId() {
+    public String getAccountId() {
         return accountId;
     }
 
-    public void setAccountId(int accountId) {
+    public void setAccountId(String accountId) {
         this.accountId = accountId;
     }
 
