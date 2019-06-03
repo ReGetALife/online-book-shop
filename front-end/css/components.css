@@ -1,0 +1,42 @@
+
+#title {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    height: 120px;
+}
+
+    #title .icon {
+        width: 30px;
+        height: 30px;
+    }
+    #title .title-name {
+        color: white;
+        font-family: STKaiti;
+        font-size: 20px;
+        margin-left: 10px;
+    }
+
+    #title .el-input {
+        margin: 10px;
+        padding-left: 10%;
+        width: 40%;
+    }
+
+    #title .el-menu {
+        margin: 0;
+        padding-left: 10px;
+        position: fixed;
+        width: 100%;
+    }
+    #title .title-selection {
+        float: right;
+        margin-left: 10px;
+    }
+
+.el-carousel {
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    height: 200px;
+}
