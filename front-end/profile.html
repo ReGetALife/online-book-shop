@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <script src="https://unpkg.com/vue@2.6.10/dist/vue.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/element-ui@2.9.1/lib/theme-chalk/index.css">
+    <script src="https://unpkg.com/element-ui@2.9.1/lib/index.js"></script>
+    <link rel="stylesheet" href="./css/components.css">
+    <script src="./js/components.js"></script>
+    <link rel="stylesheet" href="./css/profile.css">
+</head>
+
+<body>
+    <div id="top">
+        <p-title :post="post"></p-title>
+    </div>
+    <div id="content">
+        <el-card class="box-card">
+            <div slot="header" class="clearfix">
+                <span>我的个人信息</span>
+            </div>
+            <div class="item">
+                <el-image style="width: 100px; height: 100px"
+                    src="https://fuss10.elemecdn.com/e/5d/4a731a90594a4af544c0c25941171jpeg.jpeg" fit="cover">
+                </el-image>
+            </div>
+            <div class="text item">
+                用户昵称 <el-button plain>修改</el-button>
+            </div>
+            <div class="text item">
+                密码<el-button plain>修改</el-button>
+            </div>
+            <div class="text item">
+                绑定手机
+            </div>
+        </el-card>
+    </div>
+    <script src="./js/profile.js"></script>
+</body>
+
+</html>
