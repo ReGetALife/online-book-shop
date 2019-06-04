@@ -1,5 +1,5 @@
 ﻿new Vue({
-    el: '#titles',
+    el: '.title_container',
     data: {
         post: {
             activeIndex: '0'

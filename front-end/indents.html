@@ -11,17 +11,24 @@
     <link rel="stylesheet" href="./css/components.css">
 </head>
 <body>
-<div id="titles">
-    <p-title :posts="posts"></p-title>
+<div class="title_container">
+    <p-title :post="post"></p-title>
 </div>
 <div id="mains">
     <h1 id="myindent">我的订单</h1>
     <attrname></attrname>
     <indents></indents>
+    <el-pagination id="page"
+            background
+            :page-count=11
+            :pager-count="6"
+            layout="prev, pager, next">
+    </el-pagination>
 </div>
 
 
 <script src="./js/components.js"></script>
 <script src="js/indent.js"></script>
+
 </body>
 </html>
