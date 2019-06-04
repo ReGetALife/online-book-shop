@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <link rel="icon" href="./res/icon.png" type="image/x-icon" />
+    <title>搜索结果</title>
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/vue.js"></script>
+    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <link rel="stylesheet" href="./css/search.css">
+    <link rel="stylesheet" href="./css/components.css">
+</head>
+<body>
+    <div class="title_container">
+        <p-title :post="post"></p-title>
+    </div>
+    <div class="title_navigation">
+        <h5>导航菜单</h5>
+        <p-navigation></p-navigation>
+    </div>
+    <div class="search_list">
+        <template v-for="item in 100">
+            <div class="search_card">
+                <img src="./res/default.png" />
+                <div class="brief">
+                    <p>{{item}}</p>
+                    aaaaaaaaaaaaaaaaa
+
+                </div>
+            </div>
+        </template>
+    </div>
+
+
+
+    <script src="./js/components.js"></script>
+    <script src="./js/search.js"></script>
+
+</body>
+</html>

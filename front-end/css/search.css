@@ -1,0 +1,43 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+.title_container {
+    margin: 0;
+    padding: 0;
+    height: 120px;
+}
+
+.title_navigation {
+    margin: 10px;
+    position: absolute;
+    left: 10%;
+    top: 100px;
+    width: 15%;
+    position: fixed;
+}
+
+.search_list {
+    position: absolute;
+    left: 30%;
+    top: 100px;
+    width: 800px;
+    background-color: white;
+}
+
+
+.search_card {
+    border-top: dashed #409EFF;
+    border-bottom: dashed thin #2EE8E1;
+    padding: 5px;
+    margin: 10px;
+}
+    .search_card img {
+        width: 150px;
+    }
+    .search_card .brief {
+        float: right;
+        width: 600px;
+    }
+        .search_card .brief p {
+        }

@@ -21,7 +21,9 @@
     </div>
     <div class="top_list">
         <h5>销量排行</h5>
-        <p-navigation></p-navigation>
+        <template v-for="item in 10">
+            <p>{{item}}</p>
+        </template>
     </div>
     <div>
         <p-carousel class="p_carousel"></p-carousel>
@@ -35,14 +37,13 @@
             <card-carousel :post="post"></card-carousel>
         </div>
 
+        <div id="favorite_book" class="card_list">
+            <h5>猜你喜欢</h5>
+            <card-carousel :post="post"></card-carousel>
+        </div>
+
     </div>
 
-
-    <p>test</p>
-    <p>test</p>
-    <p>test</p>
-    <p>test</p>
-    <p>test</p>
 
 
     <script src="./js/components.js"></script>

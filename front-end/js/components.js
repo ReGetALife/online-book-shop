@@ -140,18 +140,16 @@ Vue.component('card', {
             name: this.post.name,
             writer: this.post.writer,
             press: this.post.press,
-            discount: this.post.discount,
+            discount: this.post.cost * this.post.discount,
             cost: this.post.cost
         }
     },
     template: `
     <div>
-        <el-card class="card_box" :body-style="{ padding: '20px' }">
+        <el-card class="card_box" :body-style="{ padding: '20px' }" shadow="hover">
             <img :src="img_res">
-            <a>{{name}}</a>
-            <br />
-            <a class="brief">{{writer}}，{{press}}</a>
-            <br />
+            <p>{{name}}</p>
+            <p class="brief">{{writer}}，{{press}}</p>
             <a class="discount"><b>￥ {{discount}}</b></a>
             <a class="cost"><s>￥ {{cost}}</s></a>
         </el-card>
