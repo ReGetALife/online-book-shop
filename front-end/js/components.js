@@ -1,8 +1,8 @@
-﻿Vue.component('p_title', {
-    props: ['posts'],
+﻿Vue.component('p-title', {
+    props: ['post'],
     data: function () {
         return {
-            activeIndex: this.posts.activeIndex,
+            activeIndex: this.post.activeIndex,
             search_input: ''
         }
     },
@@ -56,12 +56,124 @@
     `
 })
 
-Vue.component('p_carousel', {
+Vue.component('p-carousel', {
+    props: ['post'],
+    data: function () {
+        return {
+            //img_src: this.post.img_src
+            img_src: [
+                "./res/bg.jpg",
+                "./res/bg.jpg",
+                "./res/bg.jpg",
+                "./res/bg.jpg"
+            ]
+
+        }
+    },
     template: ` 
-    <div class="block">
-        <el-carousel trigger="click" height="200px">
+    <div class="carousel">
+        <el-carousel trigger="click" height="250px" :interval="4500">
             <el-carousel-item v-for="item in 4" :key="item">
-                <img src="./res/bg.jpg" />
+                <img :src="img_src[item-1]" />
+            </el-carousel-item>
+        </el-carousel>
+    </div>
+    `
+})
+
+Vue.component('p-navigation', {
+    methods: {
+        handleOpen(key, keyPath) {
+            console.log(key, keyPath);
+        },
+        handleClose(key, keyPath) {
+            console.log(key, keyPath);
+        }
+    },
+    template: `  
+    <div id="navigation">
+        <el-menu default-active="1-1" @open="handleOpen" @close="handleClose">
+            <el-submenu index="1">
+                <template slot="title">
+                    <i class="el-icon-location"></i>
+                    <span>导航一</span>
+                </template>
+                <el-menu-item-group>
+                    <template slot="title">
+                        分组一
+                    </template>
+                    <el-menu-item index="1-1">选项1</el-menu-item>
+                    <el-menu-item index="1-2">选项2</el-menu-item>
+                </el-menu-item-group>
+                <el-menu-item-group title="分组2">
+                    <el-menu-item index="1-3">选项3</el-menu-item>
+                </el-menu-item-group>
+                <el-submenu index="1-4">
+                    <template slot="title">
+                        选项4
+                    </template>
+                    <el-menu-item index="1-4-1">选项1</el-menu-item>
+                </el-submenu>
+            </el-submenu>
+            <el-menu-item index="2">
+                <i class="el-icon-menu"></i>
+                <span slot="title">导航二</span>
+            </el-menu-item>
+            <el-menu-item index="3" disabled>
+                <i class="el-icon-document"></i>
+                <span slot="title">导航三</span>
+            </el-menu-item>
+            <el-menu-item index="4">
+                <i class="el-icon-setting"></i>
+                <span slot="title">导航四</span>
+            </el-menu-item>
+        </el-menu>
+    </div>
+    `
+})
+
+Vue.component('card', {
+    props: ["post"],
+    data: function () {
+        return {
+            img_res: this.post.img_res,
+            name: this.post.name,
+            writer: this.post.writer,
+            press: this.post.press,
+            discount: this.post.discount,
+            cost: this.post.cost
+        }
+    },
+    template: `
+    <div>
+        <el-card class="card_box" :body-style="{ padding: '20px' }">
+            <img :src="img_res">
+            <a>{{name}}</a>
+            <br />
+            <a class="brief">{{writer}}，{{press}}</a>
+            <br />
+            <a class="discount"><b>￥ {{discount}}</b></a>
+            <a class="cost"><s>￥ {{cost}}</s></a>
+        </el-card>
+    </div>
+
+    `
+})
+
+Vue.component('card-carousel', {
+    props: ["post"],
+    data: function () {
+        return {
+            card_res: this.post.card_res
+        }
+    },
+    template: `
+    <div>
+        <el-carousel trigger="click" height="280px" indicator-position="outside" :autoplay="false">
+            <el-carousel-item v-for="item in 4" :key="item">
+                <card :post="card_res[3*(item-1)]"></card>
+                <card :post="card_res[3*(item-1) + 1]"></card>
+                <card :post="card_res[3*(item-1) + 2]"></card>
             </el-carousel-item>
         </el-carousel>
     </div>

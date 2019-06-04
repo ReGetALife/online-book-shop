@@ -1,0 +1,41 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+p_title {
+    margin: 0;
+    padding: 0;
+}
+.title_container {
+    margin: 0;
+    padding: 0;
+    height: 120px;
+}
+
+.title_navigation {
+    margin: 10px;
+    position: absolute;
+    left: 10%;
+    top: 100px;
+    width: 15%;
+    position: fixed;
+}
+
+.top_list {
+    margin: 10px;
+    float: right;
+    position: absolute;
+    right: 10%;
+    top: 100px;
+    width: 15%;
+    position: fixed;
+}
+
+
+.card_list {
+    position: relative;
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1%;
+}
