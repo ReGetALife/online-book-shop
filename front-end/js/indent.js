@@ -1,9 +1,8 @@
-﻿//手势列表
-new Vue({
-    el: '#titles',
+﻿new Vue({
+    el: '.title_container',
     data: {
-        posts: {
-            activeIndex: '1'
+        post: {
+            activeIndex: '0'
         }
     }
 })

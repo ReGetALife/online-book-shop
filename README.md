@@ -32,6 +32,8 @@ spring boot 参考资料：
 
 [spring 自带 md5 加密](https://www.kancloud.cn/chenzs/spring-boot_create/829027)
 
+[spring 自动注入失败](https://www.moreofless.co.uk/spring-mvc-java-autowired-component-null-repository-service/)
+
 接口管理地址：
 
 [http://139.199.75.41:3000/project/11/interface/api](http://139.199.75.41:3000/project/11/interface/api)

@@ -2,14 +2,43 @@ body {
     margin: 0;
     padding: 0;
 }
+p_title {
+    margin: 0;
+    padding: 0;
+}
+.title_container {
+    margin: 0;
+    padding: 0;
+    height: 120px;
+}
 
-#titles {
-    margin:0;
-    padding:0;
+.title_navigation {
+    margin: 10px;
+    position: absolute;
+    left: 10%;
+    top: 100px;
+    width: 15%;
+    position: fixed;
+}
+
+.top_list {
+    margin: 10px;
+    float: right;
+    position: absolute;
+    right: 10%;
+    top: 100px;
+    width: 15%;
+    position: fixed;
+}
+
+.el-pagination{
+    margin: 30px auto 50px auto;
+    width:50%;
 }
 
 #mains{
     width:60%;
+    padding: 0;
     margin-left: auto;
     margin-right: auto;
     padding:0;
@@ -18,4 +47,13 @@ body {
 #indents{
     margin:0 auto;
     padding:0;
+}
+
+#attrtop{
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    width:80%;
+    height:30px;
+    background-color: lavender;
 }
