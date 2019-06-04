@@ -6,10 +6,12 @@ body {
 #titles {
     margin:0;
     padding:0;
+    height: 120px;
 }
 
 #mains{
     width:60%;
+    padding: 0;
     margin-left: auto;
     margin-right: auto;
     padding:0;
