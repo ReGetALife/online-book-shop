@@ -71,6 +71,13 @@
         height: 160px;
     }
 
+    .card_box p {
+        width: 100%;
+        margin: 2px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
     .card_box .brief {
         color: gray;
         font-size: 12px;
