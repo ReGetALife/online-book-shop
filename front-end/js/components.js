@@ -68,6 +68,23 @@ Vue.component('p_carousel', {
     `
 })
 
+//
+Vue.component('indents',{
+    template: `
+<el-collapse accordion>
+  <el-collapse-item v-for="item in 4">
+    <template slot="title">
+    <img src="./res/default.png" width="72px" height="90px"/>
+      <div style="width:200px">订单号：10000001<br/>时间：2019-06-06 15:00</div>
+      <div>
+      <div style="margin-left: 20px margin-right: auto">the other</div>
+      </div>
+    </template>
+    <div>两本书</div>
+    <div>一本书</div>
+  </el-collapse-item>
+  `
+})
 
 
 Vue.component('s-identify', {
@@ -199,3 +216,4 @@ Vue.component('s-identify', {
     </div>    
     `
 })
+

@@ -7,3 +7,7 @@ new Vue({
         }
     }
 })
+
+new Vue({
+    el:'#mains'
+})

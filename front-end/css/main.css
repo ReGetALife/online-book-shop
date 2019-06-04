@@ -7,3 +7,15 @@ body {
     margin:0;
     padding:0;
 }
+
+#mains{
+    width:60%;
+    margin-left: auto;
+    margin-right: auto;
+    padding:0;
+}
+
+#indents{
+    margin:0 auto;
+    padding:0;
+}

@@ -34,6 +34,23 @@
         margin-left: 10px;
     }
 
+#myindent{
+        margin-bottom:50px;
+    }
+.el-collapse{
+    margin-left: auto;
+    margin-right: auto;
+    width:80%;
+}
+.el-collapse-item__arrow{
+    width:10%;
+    float:right;
+}
+
+.el-collapse-item__header{
+    height:100px;
+}
+
 .el-carousel {
     margin-left: auto;
     margin-right: auto;
