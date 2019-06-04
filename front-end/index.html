@@ -8,14 +8,36 @@
     <script src="./js/vue.js"></script>
     <script src="https://unpkg.com/element-ui/lib/index.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
-    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="./css/components.css">
 </head>
 <body>
-    <div id="titles">
-        <p_title :posts="posts"></p_title>
-        <p_carousel></p_carousel>
+    <div class="title_container">
+        <p-title :post="post"></p-title>
     </div>
+    <div class="title_navigation">
+        <h5>导航菜单</h5>
+        <p-navigation></p-navigation>
+    </div>
+    <div class="top_list">
+        <h5>销量排行</h5>
+        <p-navigation></p-navigation>
+    </div>
+    <div>
+        <p-carousel class="p_carousel"></p-carousel>
+        <div id="new_book" class="card_list">
+            <h5>新书推荐</h5>
+            <card-carousel :post="post"></card-carousel>
+        </div>
+
+        <div id="hot_book" class="card_list">
+            <h5>热门书籍</h5>
+            <card-carousel :post="post"></card-carousel>
+        </div>
+
+    </div>
+
+
     <p>test</p>
     <p>test</p>
     <p>test</p>
@@ -24,7 +46,7 @@
 
 
     <script src="./js/components.js"></script>
-    <script src="./js/main.js"></script>
+    <script src="./js/index.js"></script>
 
 </body>
 </html>

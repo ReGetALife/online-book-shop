@@ -3,7 +3,8 @@
     width: 100%;
     padding: 0;
     margin: 0;
-    height: 120px;
+    position: fixed;
+    z-index: 1000;
 }
 
     #title .icon {
@@ -16,7 +17,6 @@
         font-size: 20px;
         margin-left: 10px;
     }
-
     #title .el-input {
         margin: 10px;
         padding-left: 10%;
@@ -51,9 +51,43 @@
     height:100px;
 }
 
-.el-carousel {
+
+.carousel {
     margin-left: auto;
     margin-right: auto;
-    width: 50%;
-    height: 200px;
+    margin-bottom: 20px;
+    width: 40%;
 }
+
+
+.card_box {
+    width: 30%;
+    margin: 0 1% 0 1%;
+    float: left;
+}
+
+    .card_box img {
+        width: 100%;
+        height: 160px;
+    }
+
+    .card_box .brief {
+        color: gray;
+        font-size: 12px;
+    }
+
+    .card_box .discount {
+        color: red;
+        margin-left: 5%;
+        font-size: 14px;
+    }
+
+    .card_box .cost {
+        color: gray;
+        float: right;
+        margin-right: 10%;
+        font-size: 14px;
+        padding-top: 1.5px;
+    }
+
+
