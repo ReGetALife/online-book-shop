@@ -3,7 +3,21 @@
     data: function () {
         return {
             activeIndex: this.post.activeIndex,
-            search_input: ''
+            search_input: '',
+            dialogVisible: false,
+            ruleForm: {
+                phone: '',
+                password: ''
+            },
+            rules: {
+                phone: [
+                    {required: true, message: '请输入手机号', trigger: 'blur'},
+                    {min: 11, max: 11, message: '输入11位手机号', trigger: 'blur'}
+                ],
+                password: [
+                    {required: true, message: '请输入密码', trigger: 'blur'}
+                ]
+            }
         }
     },
     methods: {
@@ -29,6 +43,52 @@
             */
 
             //window.open('')
+        },
+        isLogin() {
+            if (Cookies.get('uid') == undefined || Cookies.get('token') == undefined)
+                return false
+            else
+                return true
+        },
+        login(formName) {
+            let that = this
+            this.$refs[formName].validate((valid) => {
+                if (valid) {
+                    $.ajax({
+                        url: "http://139.199.75.41:3000/mock/11/tokens",
+                        type: "post",
+                        contentType: "application/json",
+                        dataType: "json",
+                        data: JSON.stringify({
+                            phone: $("#ph").val(),
+                            password: $('#pass').val()
+                        }),
+                        xhrFields: {
+                            withCredentials: true//跨域
+                        }
+                    }).done(function (data) {
+                        Cookies.set('uid', data.uid)
+                        Cookies.set('token', data.token)
+                        that.dialogVisible = false
+                        that.$message({
+                            message: '登录成功！',
+                            type: 'success'
+                        })
+                    }).fail(function (xhr, status) {
+                        that.$message.error('账号或密码错误哦~')
+                        console.log('失败: ' + xhr.status + ', 原因: ' + status)
+                    })
+                } else {
+                    console.log('error submit!!')
+                    return false
+                }
+            });
+        },
+        logout() {
+            Cookies.remove('uid')
+            Cookies.remove('token')
+            this.$message('您已经退出登录哦~')
+            this.$forceUpdate()
         }
     },
     template: `  
@@ -37,21 +97,38 @@
                  background-color="#303133" text-color="#fff" active-text-color="#ffd04b">
             <el-menu-item index="0"><img class="icon" src="./res/icon.png" /><a class="title-name">虚拟书店</a></el-menu-item>
             <el-submenu index="1000" class="title-selection">
+            
                 <template slot="title">
                     <img class="icon" src="./res/portrait.png" />
                 </template>
+                <template v-if="isLogin()">
                 <el-menu-item index="1000-1">个人中心</el-menu-item>
                 <el-menu-item index="1000-2">消息通知</el-menu-item>
                 <el-menu-item index="1000-3">账户设置</el-menu-item>
-                <el-menu-item index="1000-4">退出登录</el-menu-item>
+                <el-menu-item index="1000-4" @click="logout()">退出登录</el-menu-item>
+                </template>
+                <el-menu-item v-if="!isLogin()" index="1000-5" @click="dialogVisible = true">登录</el-menu-item>
             </el-submenu>
-
             <el-menu-item index="1" class="title-selection">购物车</el-menu-item>
             <el-menu-item index="2" class="title-selection">我的订单</el-menu-item>
             <el-input placeholder="请输入内容" v-model="search_input" class="input-with-select">
                 <el-button slot="append" icon="el-icon-search" v-on:click="handleSelect"></el-button>
             </el-input>
         </el-menu>
+        <el-dialog title="登录账号" :visible.sync="dialogVisible" width="50%" :modal-append-to-body="false">           
+        <el-form :model="ruleForm" :rules="rules" ref="ruleForm">
+            <el-form-item label="手机号" prop="phone">
+                <el-input v-model="ruleForm.phone" id="ph"></el-input>
+            </el-form-item>
+            <el-form-item label="密码" prop="password">
+                <el-input type="password" v-model="ruleForm.password" id="pass"></el-input>
+            </el-form-item>
+        </el-form>
+                    <span slot="footer" class="dialog-footer">
+                        <el-button @click="dialogVisible = false">取 消</el-button>
+                        <el-button type="primary" @click="login('ruleForm')">确 定</el-button>
+                    </span>
+        </el-dialog>
     </div>
     `
 })
@@ -179,7 +256,7 @@ Vue.component('card-carousel', {
 })
 
 //
-Vue.component('indents',{
+Vue.component('indents', {
     template: `
 <el-collapse accordion> 
   <el-collapse-item v-for="item in 8">
@@ -349,4 +426,5 @@ Vue.component('s-identify', {
     </div>    
     `
 })
+
 
