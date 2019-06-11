@@ -16,8 +16,8 @@ public class GatewayApplication {
     @Bean
     public RouteLocator customRouteLocator(RouteLocatorBuilder builder) {
         return builder.routes()
-                .route(r -> r.path("/accounts").uri("lb://account-management-service").filter(new AccountGatewayFilter()))
-                .route(r -> r.path("/accounts").uri("lb://account-management-service").filter())
+                .route(r -> r.path("/accounts/**").uri("lb://account-management-service").filter(new AccountGatewayFilter()))
+                .route(r -> r.path("/tokens").uri("lb://account-management-service"))
                 .build();
     }
 
