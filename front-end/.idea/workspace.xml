@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="72e41afc-2758-4bce-8ecc-11a83216f60a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../gateway/src/main/java/com/onlinebookshop/gateway/CorsConfig.java" afterDir="false" />
+    <list default="true" id="f40ac279-0621-4fdd-8295-4f6122905e92" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/online-book-shop.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/cart.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../account-management-service/src/main/java/com/onlinebookshop/account/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/../account-management-service/src/main/java/com/onlinebookshop/account/Account.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../account-management-service/src/main/java/com/onlinebookshop/account/AccountController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../account-management-service/src/main/java/com/onlinebookshop/account/AccountController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../book-management-service/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../book-management-service/.gitignore" afterDir="false" />
@@ -40,9 +45,6 @@
       <change beforePath="$PROJECT_DIR$/js/vue.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/vue.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/profile.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/search.html" beforeDir="false" afterPath="$PROJECT_DIR$/search.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gateway/src/main/java/com/onlinebookshop/gateway/AccountGatewayFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../gateway/src/main/java/com/onlinebookshop/gateway/AccountGatewayFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gateway/src/main/java/com/onlinebookshop/gateway/GatewayApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../gateway/src/main/java/com/onlinebookshop/gateway/GatewayApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gateway/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../gateway/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../indent-management-service/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../indent-management-service/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../indent-management-service/.mvn/wrapper/MavenWrapperDownloader.java" beforeDir="false" afterPath="$PROJECT_DIR$/../indent-management-service/.mvn/wrapper/MavenWrapperDownloader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../indent-management-service/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../indent-management-service/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
@@ -58,7 +60,6 @@
       <change beforePath="$PROJECT_DIR$/../indent-management-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../indent-management-service/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../indent-management-service/src/test/java/com/onlinebookshop/indent/IndentApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/../indent-management-service/src/test/java/com/onlinebookshop/indent/IndentApplicationTests.java" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -66,40 +67,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/profile.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="23" column="18" lean-forward="true" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="18" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#el-card#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#2;n#el-card#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="e#1220#1226#0" expanded="true" />
-                <element signature="e#1290#1296#0" expanded="true" />
-                <element signature="e#1296#1302#0" expanded="true" />
-                <element signature="e#1302#1308#0" expanded="true" />
-                <element signature="e#1308#1314#0" expanded="true" />
-                <element signature="n#style#0;n#div#3;n#el-card#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#4;n#el-card#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/components.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="57" column="31" selection-start-line="57" selection-start-column="31" selection-end-line="57" selection-end-column="31" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/profile.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="24" column="38" lean-forward="true" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="38" />
+            <state relative-caret-position="1145">
+              <caret line="103" column="30" selection-start-line="103" selection-start-column="30" selection-end-line="103" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -112,31 +84,9 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/css/profile.css" />
-        <option value="$PROJECT_DIR$/js/profile.js" />
-        <option value="$PROJECT_DIR$/profile.html" />
-        <option value="$PROJECT_DIR$/js/components.js" />
+        <option value="$PROJECT_DIR$/.idea/workspace.xml" />
       </list>
     </option>
-  </component>
-  <component name="JsFlowSettings">
-    <service-enabled>true</service-enabled>
-    <exe-path />
-    <other-services-enabled>true</other-services-enabled>
-    <auto-save>true</auto-save>
-  </component>
-  <component name="MavenImportPreferences">
-    <option name="generalSettings">
-      <MavenGeneralSettings>
-        <option name="mavenHome" value="C:/Program Files/Apache/apache-maven-3.6.0-bin/apache-maven-3.6.0" />
-      </MavenGeneralSettings>
-    </option>
-  </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="85" />
-    <option name="y" value="20" />
-    <option name="width" value="1750" />
-    <option name="height" value="1030" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -150,6 +100,11 @@
             <path>
               <item name="front-end" type="b2602c69:ProjectViewProjectNode" />
               <item name="front-end" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="front-end" type="b2602c69:ProjectViewProjectNode" />
+              <item name="front-end" type="462c0819:PsiDirectoryNode" />
+              <item name=".idea" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="front-end" type="b2602c69:ProjectViewProjectNode" />
@@ -168,15 +123,6 @@
       <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
-  </component>
-  <component name="PropertiesComponent">
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1560010724761" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../account-management-service" />
-    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
-    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -215,12 +161,12 @@
       <workItem from="1560093926496" duration="31000" />
       <workItem from="1560094151108" duration="188000" />
       <workItem from="1560212779814" duration="3267000" />
-      <workItem from="1560234368724" duration="6625000" />
+      <workItem from="1560234368724" duration="7502000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="36450000" />
+    <option name="totallyTimeSpent" value="37327000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -301,10 +247,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="152" lean-forward="true" selection-start-line="152" selection-end-line="152" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/js/components.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="57" column="31" selection-start-line="57" selection-start-column="31" selection-end-line="57" selection-end-column="31" />
+        <state relative-caret-position="1145">
+          <caret line="103" column="30" selection-start-line="103" selection-start-column="30" selection-end-line="103" selection-end-column="30" />
         </state>
       </provider>
     </entry>

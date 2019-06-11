@@ -293,17 +293,17 @@ Vue.component('card-carousel', {
 })
 
 //
-Vue.component('indents', {
+/*Vue.component('indents', {
     template: `
 <el-collapse accordion> 
-  <el-collapse-item v-for="item in 8">
+  <el-collapse-item v-for="item in 8" v-if="!isChangingit">
     <template slot="title">
-      <div style="width:20%;text-align: center">订单ID:{{10000001}}</div>
+      <div style="width:20%;text-align: center">订单ID:{{indent_id}}</div>
       <div style="width:15%;text-align: center">{{100.00}}</div>
       <div style="width:10%;text-align: center">{{0}}</div>
       <div style="width:25%;text-align: center">2019-06-06 15:00</div>
       <div style="width:20%;text-align: center">
-      <el-button size="mini" type="primary" round>删除订单</el-button>
+      <el-button @click="isChangingit=true" size="mini" type="primary" round>删除订单</el-button>
       <el-button size="mini" type="primary" round disabled>取消订单</el-button><br>
       <el-button size="mini" type="primary" round>确认收货</el-button>
       <el-button size="mini" type="primary" round>支付订单</el-button>
@@ -320,18 +320,18 @@ Vue.component('indents', {
   </el-collapse-item>
   </el-collapse>
   `
-})
-Vue.component('attrname',{
+})*/
+/*Vue.component('attrname',{
     template:`
     <div id="attrtop">
     <div style="width:20%;float:left;text-align: center">订单ID</div>
     <div style="width:15%;float:left;text-align: center">总价格</div>
-    <div style="width:10%;float:left;text-align: center">订单状态</div>
-    <div style="width:20%;float:left;text-align: center">交易时间</div>
+    <div style="width:11%;float:left;text-align: center">订单状态</div>
+    <div style="width:22%;float:left;text-align: center">交易时间</div>
     <div style="width:20%;float:left;text-align: center">操作</div>
 </div>
     `
-})
+})*/
 
 
 Vue.component('s-identify', {
