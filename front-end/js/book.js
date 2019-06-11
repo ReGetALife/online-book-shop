@@ -13,7 +13,7 @@ new Vue({
 
 
 new Vue({
-    el: '.search_list',
+    el: '.book_info',
     data: {
         post: {
             list_res: $.ajax({ url: "http://139.199.75.41:3000/mock/11/new_book", async: false }).responseJSON.res

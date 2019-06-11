@@ -15,7 +15,7 @@ public interface BookMapper {
 
     //按id查看书籍
     @Select("select * from book where book_id=#{book_id}")
-    List<Book> getBook(@Param(value = "book_id")Long book_id);
+    List<Book> getBook(@Param(value = "book_id")int book_id);
 
     //搜索书籍
     @Select("select * from book where title like #{key}")
