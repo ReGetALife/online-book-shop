@@ -24,11 +24,16 @@ public class AccountGatewayFilter implements GatewayFilter {
         ServerHttpRequest request = exchange.getRequest();
         HttpHeaders headers = request.getHeaders();
 
-        //假如是新建账户，则不鉴权
+
+        //假如是新建账户或者获取token，则不鉴权
         //System.out.println(request.getMethod().toString()+request.getPath().toString());
-        if(request.getMethod() != null && request.getMethod().toString().equals("POST") && request.getPath().toString().equals("/accounts")){
+        if(request.getMethod() != null
+                && request.getMethod().toString().equals("POST")
+                && (request.getPath().toString().equals("/accounts")||request.getPath().toString().equals("/tokens"))
+        ){
             return chain.filter(exchange);
         }
+
         //从头部或请求参数获取uid和token
         String token = headers.getFirst(AUTHORIZE_TOKEN);
         String uid = headers.getFirst(AUTHORIZE_UID);
