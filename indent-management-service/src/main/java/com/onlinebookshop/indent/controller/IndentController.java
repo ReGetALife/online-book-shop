@@ -1,9 +1,8 @@
 package com.onlinebookshop.indent.controller;
 
 import com.onlinebookshop.indent.entity.Indent;
+import com.onlinebookshop.indent.entity.IndentBook;
 import com.onlinebookshop.indent.mapper.IndentMapper;
-import org.graalvm.compiler.lir.stackslotalloc.StackInterval;
-import org.springframework.http.RequestEntity;
 import org.springframework.http.ResponseEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -17,7 +16,7 @@ public class IndentController {
 
 
     //查看个人所有订单
-    @RequestMapping(path = "/indent/{account_id}",method = RequestMethod.GET)
+    @RequestMapping(path = "/indents/{account_id}",method = RequestMethod.GET)
     @ResponseBody
     public ResponseEntity<List<Indent>> getIndividualIndents(@PathVariable String account_id)
     {
@@ -43,4 +42,5 @@ public class IndentController {
 
     //发起订单
 
+    //查看
 }
