@@ -46,17 +46,36 @@
             //window.open('')
         },
         isLogin() {
+            let that = this
             if (Cookies.get('uid') == undefined || Cookies.get('token') == undefined)
                 return false
             else
+            {
+                $.ajax({
+                    url: "http://139.199.75.41:8085/accounts/"+Cookies.get('uid'),
+                    type: "get",
+                    dataType: "json",
+                    headers: {
+                        AUTHORIZE_UID: Cookies.get('uid'),
+                        AUTHORIZE_TOKEN: Cookies.get('token')
+                    },
+                    xhrFields: {
+                        withCredentials: true//跨域
+                    },
+                    crossDomain: true,
+                }).done(function (data1) {
+                    that.accountName = data1.accountName
+                })
                 return true
+            }
+
         },
         login(formName) {
             let that = this
             this.$refs[formName].validate((valid) => {
                 if (valid) {
                     $.ajax({
-                        url: "http://139.199.75.41:3000/mock/11/tokens",
+                        url: "http://139.199.75.41:8085/tokens",
                         type: "post",
                         contentType: "application/json",
                         dataType: "json",
@@ -66,14 +85,23 @@
                         }),
                         xhrFields: {
                             withCredentials: true//跨域
-                        }
+                        },
+                        crossDomain: true
                     }).done(function (data) {
                         $.ajax({
-                            url: "http://139.199.75.41:3000/mock/11/accounts/"+data.uid,
+                            url: "http://139.199.75.41:8085/accounts/"+data.uid,
                             type: "get",
-                            dataType: "json"
+                            dataType: "json",
+                            headers: {
+                                AUTHORIZE_UID: data.uid,
+                                AUTHORIZE_TOKEN: data.token
+                            },
+                            xhrFields: {
+                                withCredentials: true//跨域
+                            },
+                            crossDomain: true,
                         }).done(function (data1) {
-                            console.log(data1)
+                            //console.log(data1)
                             that.accountName = data1.accountName
                         })
                         Cookies.set('uid', data.uid)
