@@ -3,21 +3,36 @@ package com.onlinebookshop.book.entity;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.Date;
 public class Book {
-    private Long book_id;   //书籍id
-    private String title;   //书籍名称
-    private double price;   //原价
-    private double discount;//折扣
-    private String write;   //作者
-    private String press;   //出版社
-    private String brief;   //简介
-    private String cover;   //封面图片路径
-    private Date pubdate;   //出版日期
+    private int book_id;
+    private String ISBN;
+    private String title;
+    private String subtitle;
+    private String series;
+    private String writer;
+    private String press;
+    private Date pubdate;
+    private String edition;
+    private String impression;
+    private String size;
+    private String pages;
+    private String words;
+    private Date print_date;
+    private String pack;
+    private double price;
+    private double discount;
+    private String classification;
+    private String category;
+    private String brief;
+    private String writer_brief;
+    private String content;
+    private String image;
+
 
     @JsonProperty(value = "book_id")
-    public Long getbook_id() {
+    public int getbook_id() {
         return book_id;
     }
-    public void setbook_id(Long book_id) {
+    public void setbook_id(int book_id) {
         this.book_id = book_id;
     }
 
@@ -45,12 +60,12 @@ public class Book {
         this.discount = discount;
     }
 
-    @JsonProperty(value = "write")
-    public String getwrite() {
-        return write;
+    @JsonProperty(value = "writer")
+    public String getwriter() {
+        return writer;
     }
-    public void setwrite(String write) {
-        this.write = write;
+    public void setwriter(String writer) {
+        this.writer = writer;
     }
 
     @JsonProperty(value = "press")
@@ -69,12 +84,10 @@ public class Book {
         this.brief = brief;
     }
 
-    @JsonProperty(value = "cover")
-    public String getcover() {
-        return cover;
-    }
-    public void setcover(String cover) {
-        this.cover = cover;
+    @JsonProperty(value = "image")
+    public String getimage() { return image; }
+    public void setimage(String image) {
+        this.image = image;
     }
 
     @JsonProperty(value = "pubdate")

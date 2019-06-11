@@ -23,7 +23,7 @@ public class BookController {
 
     //按id查看
     @RequestMapping(path = "/book",method = RequestMethod.GET)
-    public ResponseEntity getBook(@RequestParam(value = "book_id",required = false)Long book_id)
+    public ResponseEntity getBook(@RequestParam(value = "book_id",required = false)int book_id)
     {
         List<Book> Books = bookMapper.getBook(book_id);
         return ResponseEntity.ok(Books);

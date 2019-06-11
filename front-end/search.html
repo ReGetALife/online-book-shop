@@ -21,7 +21,7 @@
         <p-navigation></p-navigation>
     </div>
     <div class="search_list">
-        <template v-for="item in post.list_res">
+        <template v-for="item in showList">
             <div class="search_card">
                 <a href=""><img :src="item.img_res" /></a>
                 <div class="intro">
@@ -32,10 +32,17 @@
                     </p>
                     <p class="writer">{{item.writer}}，{{item.press}}</p>
                     <p class="brief">{{item.brief}}</p>
-                    <el-button circle class="cart_botton" type="danger" size="small"><img src="./res/cart.png" /></el-button>
+                    <el-button circle class="cart_button" type="danger" size="small" @click="addToCart(item.book_id)"><img src="./res/cart.png" /></el-button>
                 </div>
             </div>
         </template>
+        <div class="block search_pagination">
+            <el-pagination
+                    background layout="prev, pager, next"
+                    :total="count" @current-change="handleCurrentChange"
+                    :current-page="currentPage">
+            </el-pagination>
+        </div>
     </div>
 
 

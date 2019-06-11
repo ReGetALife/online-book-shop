@@ -1,22 +1,52 @@
 ﻿Vue.component('p-title', {
     props: ['post'],
     data: function () {
+        var validatePass = (rule, value, callback) => {
+            if (value === '') {
+                callback(new Error('请输入密码'));
+            } else {
+                if (this.ruleForm.checkPass !== '') {
+                    this.$refs.ruleForm.validateField('checkPass');
+                }
+                callback();
+            }
+        };
+        var validatePass2 = (rule, value, callback) => {
+            if (value === '') {
+                callback(new Error('请再次输入密码'));
+            } else if (value !== this.ruleForm.pass) {
+                callback(new Error('两次输入密码不一致!'));
+            } else {
+                callback();
+            }
+        };
         return {
             activeIndex: this.post.activeIndex,
             accountName: "个人中心",
             search_input: '',
             dialogVisible: false,
+            RegistryDialogVisible: false,
             ruleForm: {
                 phone: '',
-                password: ''
+                password: '',
+                pass:'',
+                checkPass: '',
+                name: ''
             },
             rules: {
                 phone: [
                     {required: true, message: '请输入手机号', trigger: 'blur'},
                     {min: 11, max: 11, message: '输入11位手机号', trigger: 'blur'}
                 ],
-                password: [
-                    {required: true, message: '请输入密码', trigger: 'blur'}
+                password:[{required: true, message: '请输入密码', trigger: 'blur'}],
+                pass: [
+                    { validator: validatePass, trigger: 'blur' ,required: true}
+                ],
+                checkPass: [
+                    { validator: validatePass2, trigger: 'blur' ,required: true}
+                ],
+                name: [
+                    {required: true, message: '请输入用户名', trigger: 'blur'}
                 ]
             }
         }
@@ -126,6 +156,69 @@
             Cookies.remove('token')
             this.$message('您已经退出登录哦~')
             this.$forceUpdate()
+        },
+        registry(formName){
+            let that = this
+            this.$refs[formName].validate((valid) => {
+                if (valid) {
+                    $.ajax({
+                        url: "http://139.199.75.41:8085/accounts",
+                        type: "post",
+                        contentType: "application/json",
+                        dataType: "json",
+                        data: JSON.stringify({
+                            accountName: $("#newname").val(),
+                            avatar: '',
+                            password:$('#newpass').val(),
+                            phone:$('#newph').val()
+                        }),
+                        xhrFields: {
+                            withCredentials: true//跨域
+                        },
+                        crossDomain: true
+                    }).done(function (data) {
+                        //console.log(data)
+                        that.RegistryDialogVisible = false
+                        that.$message({
+                            message: '注册成功！',
+                            type: 'success'
+                        })
+                        $.ajax({
+                            url: "http://139.199.75.41:8085/tokens",
+                            type: "post",
+                            contentType: "application/json",
+                            dataType: "json",
+                            data: JSON.stringify({
+                                phone: $('#newph').val(),
+                                password: $('#newpass').val()
+                            }),
+                            xhrFields: {
+                                withCredentials: true//跨域
+                            },
+                            crossDomain: true
+                        }).done(function (data1) {
+                            that.accountName=$("#newname").val()
+                            Cookies.set('uid', data1.uid)
+                            Cookies.set('token', data1.token)
+                            that.$message({
+                                message: '登录成功！',
+                                type: 'success'
+                            })
+                            that.$forceUpdate()
+                        }).fail(function (xhr, status) {
+                            that.$message.error('自动登录失败惹~')
+                            console.log('失败: ' + xhr.status + ', 原因: ' + status)
+                        })
+                    }).fail(function (xhr, status) {
+                        that.$message.error('哎呀这个手机号已经被注册了~')
+                        console.log('失败: ' + xhr.status + ', 原因: ' + status)
+                    })
+                    //that.$message.error('www~')
+                } else {
+                    console.log('error submit!!')
+                    return false
+                }
+            });
         }
     },
     template: `  
@@ -144,7 +237,10 @@
                 <el-menu-item index="1000-3">账户设置</el-menu-item>
                 <el-menu-item index="1000-4" @click="logout()">退出登录</el-menu-item>
                 </template>
-                <el-menu-item v-if="!isLogin()" index="1000-5" @click="dialogVisible = true">登录</el-menu-item>
+                <template v-if="!isLogin()">
+                <el-menu-item index="1000-5" @click="dialogVisible = true">登录</el-menu-item>
+                <el-menu-item index="1000-6" @click="RegistryDialogVisible = true">注册</el-menu-item>
+                </template>
             </el-submenu>
             <el-menu-item index="1" class="title-selection">购物车</el-menu-item>
             <el-menu-item index="2" class="title-selection">我的订单</el-menu-item>
@@ -153,7 +249,7 @@
             </el-input>
         </el-menu>
         <el-dialog title="登录账号" :visible.sync="dialogVisible" width="50%" :modal-append-to-body="false">           
-        <el-form :model="ruleForm" :rules="rules" ref="ruleForm">
+        <el-form :model="ruleForm" :rules="rules" ref="ruleForm" label-width="80px" label-position="left">
             <el-form-item label="手机号" prop="phone">
                 <el-input v-model="ruleForm.phone" id="ph"></el-input>
             </el-form-item>
@@ -164,6 +260,26 @@
                     <span slot="footer" class="dialog-footer">
                         <el-button @click="dialogVisible = false">取 消</el-button>
                         <el-button type="primary" @click="login('ruleForm')">确 定</el-button>
+                    </span>
+        </el-dialog>
+        <el-dialog title="注册账号" :visible.sync="RegistryDialogVisible" width="50%" :modal-append-to-body="false">           
+        <el-form :model="ruleForm" :rules="rules" ref="ruleForm" label-width="80px" label-position="left">
+            <el-form-item label="手机号" prop="phone">
+                <el-input v-model="ruleForm.phone" id="newph"></el-input>
+            </el-form-item>
+            <el-form-item label="用户名" prop="name">
+                <el-input v-model="ruleForm.name" id="newname"></el-input>
+            </el-form-item>
+            <el-form-item label="密码 " prop="pass">
+                <el-input type="password" v-model="ruleForm.pass" id="newpass"></el-input>
+            </el-form-item>
+            <el-form-item label="确认密码 " prop="checkPass">
+                <el-input type="password" v-model="ruleForm.checkPass"></el-input>
+            </el-form-item>
+        </el-form>
+                    <span slot="footer" class="dialog-footer">
+                        <el-button @click="RegistryDialogVisible = false">取 消</el-button>
+                        <el-button type="primary" @click="registry('ruleForm')">确 定</el-button>
                     </span>
         </el-dialog>
     </div>
