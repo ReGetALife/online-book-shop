@@ -52,8 +52,8 @@
         }
     },
     methods: {
-        tiaozhuan(){
-            window.location.href='indent.html';
+        tiaozhuan(destination){
+            window.location.href=destination;
         },
 
         handleSelect(key, keyPath) {
@@ -160,6 +160,7 @@
             Cookies.remove('token')
             this.$message('您已经退出登录哦~')
             this.$forceUpdate()
+            window.location.href='index.html'
         },
         registry(formName){
             let that = this
@@ -229,14 +230,14 @@
     <div id="title">
         <el-menu :default-active="activeIndex" mode="horizontal" @select="handleSelect"
                  background-color="#303133" text-color="#fff" active-text-color="#ffd04b">
-            <el-menu-item index="0"><img class="icon" src="./res/icon.png" /><a class="title-name">虚拟书店</a></el-menu-item>
+            <el-menu-item index="0"><img class="icon" src="./res/icon.png" /><a class="title-name" @click="tiaozhuan('index.html')">虚拟书店</a></el-menu-item>
             <el-submenu index="1000" class="title-selection">
             
                 <template slot="title">
                     <img class="icon" src="./res/portrait.png" />
                 </template>
                 <template v-if="isLogin()">
-                <el-menu-item index="1000-1">{{accountName}}</el-menu-item>
+                <el-menu-item index="1000-1" @click="tiaozhuan('profile.html')">{{accountName}}</el-menu-item>
                 <el-menu-item index="1000-2">消息通知</el-menu-item>
                 <el-menu-item index="1000-3">账户设置</el-menu-item>
                 <el-menu-item index="1000-4" @click="logout()">退出登录</el-menu-item>
@@ -247,7 +248,7 @@
                 </template>
             </el-submenu>
             <el-menu-item index="1" class="title-selection">购物车</el-menu-item>
-            <el-menu-item index="2" class="title-selection" @click="tiaozhuan">我的订单</el-menu-item>
+            <el-menu-item index="2" class="title-selection" @click="tiaozhuan('indent.html')">我的订单</el-menu-item>
             <el-input placeholder="请输入内容" v-model="search_input" class="input-with-select">
                 <el-button slot="append" icon="el-icon-search" v-on:click="handleSelect"></el-button>
             </el-input>

@@ -22,9 +22,13 @@ new Vue({
     created: function () {
         var that = this
         $.ajax({
-            url: "http://139.199.75.41:3000/mock/11/accounts/{accountId}",
+            url: "http://139.199.75.41:8085/accounts/"+Cookies.get('uid'),
             type: "get",
-            dataType: 'json'
+            dataType: 'json',
+            headers: {
+                AUTHORIZE_UID: Cookies.get('uid'),
+                AUTHORIZE_TOKEN: Cookies.get('token')
+            }
         }).done(function (data) {
             //console.log(data)
             that.name = data.accountName
