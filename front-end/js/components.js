@@ -52,6 +52,10 @@
         }
     },
     methods: {
+        tiaozhuan(){
+            window.location.href='indent.html';
+        },
+
         handleSelect(key, keyPath) {
             console.log(key, keyPath);
             /*
@@ -243,7 +247,7 @@
                 </template>
             </el-submenu>
             <el-menu-item index="1" class="title-selection">购物车</el-menu-item>
-            <el-menu-item index="2" class="title-selection">我的订单</el-menu-item>
+            <el-menu-item index="2" class="title-selection" @click="tiaozhuan">我的订单</el-menu-item>
             <el-input placeholder="请输入内容" v-model="search_input" class="input-with-select">
                 <el-button slot="append" icon="el-icon-search" v-on:click="handleSelect"></el-button>
             </el-input>
