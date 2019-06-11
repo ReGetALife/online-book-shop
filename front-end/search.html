@@ -7,6 +7,7 @@
     <script src="./js/jquery.min.js"></script>
     <script src="./js/vue.js"></script>
     <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+    <script src="https://unpkg.com/js-cookie@2.2.0/src/js.cookie.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
     <link rel="stylesheet" href="./css/search.css">
     <link rel="stylesheet" href="./css/components.css">
@@ -20,13 +21,18 @@
         <p-navigation></p-navigation>
     </div>
     <div class="search_list">
-        <template v-for="item in 100">
+        <template v-for="item in post.list_res">
             <div class="search_card">
-                <img src="./res/default.png" />
-                <div class="brief">
-                    <p>{{item}}</p>
-                    aaaaaaaaaaaaaaaaa
-
+                <a href=""><img :src="item.img_res" /></a>
+                <div class="intro">
+                    <p><a href="">{{item.name}}</a></p>
+                    <p>
+                        <a class="discount"><b>￥ {{item.discount * item.cost}}</b></a>
+                        <a class="cost"><s>￥ {{item.cost}}</s></a>
+                    </p>
+                    <p class="writer">{{item.writer}}，{{item.press}}</p>
+                    <p class="brief">{{item.brief}}</p>
+                    <el-button circle class="cart_botton" type="danger" size="small"><img src="./res/cart.png" /></el-button>
                 </div>
             </div>
         </template>

@@ -33,11 +33,54 @@ body {
     margin: 10px;
 }
     .search_card img {
-        width: 150px;
+        width: 120px;
+        height: 150px;
+    }
+    .search_card .intro {
+        float: right;
+        width: 620px;
+    }
+        .search_card .intro a {
+            text-decoration: none;
+        }
+        .search_card .intro p {
+            margin-bottom: 2px;
+            margin-top: 2px;
+        }
+
+
+    .search_card .discount {
+        color: red;
+        font-size: 13px;
+    }
+    .search_card .cost {
+        color: gray;
+        font-size: 13px;
+    }
+    .search_card .writer {
+        font-size: 13px;
+        color: #409EFF;
+        width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
     }
     .search_card .brief {
-        float: right;
-        width: 600px;
+        font-size: 12px;
+        width: 100%;
+        height: 40px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
     }
-        .search_card .brief p {
+
+    .search_card .cart_botton {
+        margin: 2px;
+    }
+
+        .search_card .cart_botton img {
+            width:20px;
+            height:20px;
         }
