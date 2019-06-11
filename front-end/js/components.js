@@ -3,6 +3,7 @@
     data: function () {
         return {
             activeIndex: this.post.activeIndex,
+            accountName: "个人中心",
             search_input: '',
             dialogVisible: false,
             ruleForm: {
@@ -67,6 +68,14 @@
                             withCredentials: true//跨域
                         }
                     }).done(function (data) {
+                        $.ajax({
+                            url: "http://139.199.75.41:3000/mock/11/accounts/"+data.uid,
+                            type: "get",
+                            dataType: "json"
+                        }).done(function (data1) {
+                            console.log(data1)
+                            that.accountName = data1.accountName
+                        })
                         Cookies.set('uid', data.uid)
                         Cookies.set('token', data.token)
                         that.dialogVisible = false
@@ -102,7 +111,7 @@
                     <img class="icon" src="./res/portrait.png" />
                 </template>
                 <template v-if="isLogin()">
-                <el-menu-item index="1000-1">个人中心</el-menu-item>
+                <el-menu-item index="1000-1">{{accountName}}</el-menu-item>
                 <el-menu-item index="1000-2">消息通知</el-menu-item>
                 <el-menu-item index="1000-3">账户设置</el-menu-item>
                 <el-menu-item index="1000-4" @click="logout()">退出登录</el-menu-item>
