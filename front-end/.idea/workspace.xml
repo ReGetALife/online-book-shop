@@ -2,11 +2,65 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="72e41afc-2758-4bce-8ecc-11a83216f60a" name="Default Changelist" comment="">
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/search.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/search.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/search.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/search.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/search.html" beforeDir="false" afterPath="$PROJECT_DIR$/search.html" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/../account-management-service/src/main/java/com/onlinebookshop/account/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/../account-management-service/src/main/java/com/onlinebookshop/account/Account.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../account-management-service/src/main/java/com/onlinebookshop/account/AccountController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../account-management-service/src/main/java/com/onlinebookshop/account/AccountController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../book-management-service/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../book-management-service/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../book-management-service/.mvn/wrapper/MavenWrapperDownloader.java" beforeDir="false" afterPath="$PROJECT_DIR$/../book-management-service/.mvn/wrapper/MavenWrapperDownloader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../book-management-service/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../book-management-service/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../book-management-service/mvnw" beforeDir="false" afterPath="$PROJECT_DIR$/../book-management-service/mvnw" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../book-management-service/mvnw.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/../book-management-service/mvnw.cmd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../book-management-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../book-management-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../book-management-service/src/main/java/com/onlinebookshop/book/BookApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../book-management-service/src/main/java/com/onlinebookshop/book/BookApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../book-management-service/src/main/java/com/onlinebookshop/book/config/CORSConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/../book-management-service/src/main/java/com/onlinebookshop/book/config/CORSConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../book-management-service/src/main/java/com/onlinebookshop/book/controller/BookController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../book-management-service/src/main/java/com/onlinebookshop/book/controller/BookController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../book-management-service/src/main/java/com/onlinebookshop/book/entity/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/../book-management-service/src/main/java/com/onlinebookshop/book/entity/Book.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../book-management-service/src/main/java/com/onlinebookshop/book/mapper/BookMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/../book-management-service/src/main/java/com/onlinebookshop/book/mapper/BookMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../book-management-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../book-management-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../book-management-service/src/test/java/com/onlinebookshop/book/BookApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/../book-management-service/src/test/java/com/onlinebookshop/book/BookApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/front-end.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/front-end.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/components.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/components.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/indent.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/indent.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/profile.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/profile.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/search.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/search.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/indents.html" beforeDir="false" afterPath="$PROJECT_DIR$/indents.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/components.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/components.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/indent.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/indent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/jquery.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/jquery.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/profile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/search.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/search.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/vue.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/vue.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/profile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/search.html" beforeDir="false" afterPath="$PROJECT_DIR$/search.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../indent-management-service/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../indent-management-service/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../indent-management-service/.mvn/wrapper/MavenWrapperDownloader.java" beforeDir="false" afterPath="$PROJECT_DIR$/../indent-management-service/.mvn/wrapper/MavenWrapperDownloader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../indent-management-service/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../indent-management-service/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../indent-management-service/mvnw" beforeDir="false" afterPath="$PROJECT_DIR$/../indent-management-service/mvnw" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../indent-management-service/mvnw.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/../indent-management-service/mvnw.cmd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../indent-management-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../indent-management-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../indent-management-service/src/main/java/com/onlinebookshop/indent/IndentApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../indent-management-service/src/main/java/com/onlinebookshop/indent/IndentApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../indent-management-service/src/main/java/com/onlinebookshop/indent/config/CORSConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/../indent-management-service/src/main/java/com/onlinebookshop/indent/config/CORSConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../indent-management-service/src/main/java/com/onlinebookshop/indent/controller/IndentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../indent-management-service/src/main/java/com/onlinebookshop/indent/controller/IndentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../indent-management-service/src/main/java/com/onlinebookshop/indent/entity/Indent.java" beforeDir="false" afterPath="$PROJECT_DIR$/../indent-management-service/src/main/java/com/onlinebookshop/indent/entity/Indent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../indent-management-service/src/main/java/com/onlinebookshop/indent/entity/IndentBook.java" beforeDir="false" afterPath="$PROJECT_DIR$/../indent-management-service/src/main/java/com/onlinebookshop/indent/entity/IndentBook.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../indent-management-service/src/main/java/com/onlinebookshop/indent/mapper/IndentMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/../indent-management-service/src/main/java/com/onlinebookshop/indent/mapper/IndentMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../indent-management-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../indent-management-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../indent-management-service/src/test/java/com/onlinebookshop/indent/IndentApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/../indent-management-service/src/test/java/com/onlinebookshop/indent/IndentApplicationTests.java" afterDir="false" />
+>>>>>>> f7c73a778895e053d46d50315768be83104b876f
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,8 +73,24 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/profile.html">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="114">
               <caret line="6" column="78" selection-start-line="5" selection-start-column="77" selection-end-line="6" selection-end-column="78" />
+=======
+            <state relative-caret-position="600">
+              <caret line="40" column="84" selection-start-line="40" selection-start-column="84" selection-end-line="40" selection-end-column="84" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#el-card#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#2;n#el-card#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="e#1220#1226#0" expanded="true" />
+                <element signature="e#1290#1296#0" expanded="true" />
+                <element signature="e#1296#1302#0" expanded="true" />
+                <element signature="e#1302#1308#0" expanded="true" />
+                <element signature="e#1308#1314#0" expanded="true" />
+                <element signature="n#style#0;n#div#3;n#el-card#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#4;n#el-card#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+>>>>>>> f7c73a778895e053d46d50315768be83104b876f
             </state>
           </provider>
         </entry>
@@ -37,6 +107,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/components.js">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="152">
               <caret line="8" column="26" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
             </state>
@@ -48,6 +119,23 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="437">
               <caret line="23" column="48" lean-forward="true" selection-start-line="23" selection-start-column="48" selection-end-line="23" selection-end-column="48" />
+=======
+            <state relative-caret-position="375">
+              <caret line="46" column="10" lean-forward="true" selection-start-line="46" selection-start-column="10" selection-end-line="46" selection-end-column="10" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#template#0;n#el-collapse-item#0;n#el-collapse#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#template#0;n#el-collapse-item#0;n#el-collapse#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#2;n#template#0;n#el-collapse-item#0;n#el-collapse#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#3;n#template#0;n#el-collapse-item#0;n#el-collapse#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#4;n#template#0;n#el-collapse-item#0;n#el-collapse#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#el-collapse-item#0;n#el-collapse#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#2;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#3;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#4;n#div#0;n#!!top" expanded="true" />
+              </folding>
+>>>>>>> f7c73a778895e053d46d50315768be83104b876f
             </state>
           </provider>
         </entry>
@@ -55,8 +143,13 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/profile.js">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="76">
               <caret line="4" column="31" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="31" />
+=======
+            <state relative-caret-position="210">
+              <caret line="14" column="20" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
+>>>>>>> f7c73a778895e053d46d50315768be83104b876f
             </state>
           </provider>
         </entry>
@@ -69,6 +162,7 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/css/profile.css" />
         <option value="$PROJECT_DIR$/js/profile.js" />
         <option value="$PROJECT_DIR$/profile.html" />
         <option value="$PROJECT_DIR$/js/components.js" />
@@ -76,6 +170,12 @@
         <option value="$PROJECT_DIR$/search.html" />
       </list>
     </option>
+  </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -106,6 +206,11 @@
             <path>
               <item name="front-end" type="b2602c69:ProjectViewProjectNode" />
               <item name="front-end" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="front-end" type="b2602c69:ProjectViewProjectNode" />
+              <item name="front-end" type="462c0819:PsiDirectoryNode" />
               <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -120,11 +225,11 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1559643486304" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1560010724761" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../gateway" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -148,14 +253,33 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1559631096229</updated>
+<<<<<<< HEAD
       <workItem from="1559631097891" duration="12082000" />
       <workItem from="1559643890743" duration="549000" />
       <workItem from="1560211571479" duration="284000" />
       <workItem from="1560214388800" duration="147000" />
+=======
+      <workItem from="1559631097891" duration="13559000" />
+      <workItem from="1559975734625" duration="301000" />
+      <workItem from="1559976256485" duration="908000" />
+      <workItem from="1559977202579" duration="688000" />
+      <workItem from="1559977911264" duration="1388000" />
+      <workItem from="1559989686727" duration="5405000" />
+      <workItem from="1560059595110" duration="2899000" />
+      <workItem from="1560091963328" duration="212000" />
+      <workItem from="1560092310564" duration="53000" />
+      <workItem from="1560092626585" duration="836000" />
+      <workItem from="1560093485165" duration="7000" />
+      <workItem from="1560093668255" duration="83000" />
+      <workItem from="1560093926496" duration="31000" />
+      <workItem from="1560094151108" duration="188000" />
+      <workItem from="1560212779814" duration="3267000" />
+>>>>>>> f7c73a778895e053d46d50315768be83104b876f
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="13062000" />
   </component>
   <component name="ToolWindowManager">
@@ -163,6 +287,14 @@
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28986588" />
+=======
+    <option name="totallyTimeSpent" value="29825000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3016086" />
+>>>>>>> f7c73a778895e053d46d50315768be83104b876f
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -180,7 +312,11 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Terminal" order="10" />
+<<<<<<< HEAD
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+=======
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" weight="0.3286119" />
+>>>>>>> f7c73a778895e053d46d50315768be83104b876f
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -197,6 +333,7 @@
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/js/jquery.cookie.js" />
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/profile.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="114">
@@ -208,13 +345,50 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
           <caret line="10" column="78" selection-start-line="9" selection-start-column="89" selection-end-line="10" selection-end-column="78" />
+=======
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/jshell/jshell_console.snippet">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/idea64.exe.vmoptions" />
+    <entry file="file://$APPLICATION_CONFIG_DIR$/idea.properties" />
+    <entry file="file://$PROJECT_DIR$/css/profile.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="10" selection-start-line="20" selection-start-column="10" selection-end-line="20" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/index.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/profile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="20" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
+>>>>>>> f7c73a778895e053d46d50315768be83104b876f
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/components.js">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="152">
           <caret line="8" column="26" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
+=======
+        <state relative-caret-position="600">
+          <caret line="40" column="84" selection-start-line="40" selection-start-column="84" selection-end-line="40" selection-end-column="84" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#el-card#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#el-card#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#1220#1226#0" expanded="true" />
+            <element signature="e#1290#1296#0" expanded="true" />
+            <element signature="e#1296#1302#0" expanded="true" />
+            <element signature="e#1302#1308#0" expanded="true" />
+            <element signature="e#1308#1314#0" expanded="true" />
+            <element signature="n#style#0;n#div#3;n#el-card#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#4;n#el-card#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+>>>>>>> f7c73a778895e053d46d50315768be83104b876f
         </state>
       </provider>
     </entry>
@@ -227,8 +401,26 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/search.html">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="437">
           <caret line="23" column="48" lean-forward="true" selection-start-line="23" selection-start-column="48" selection-end-line="23" selection-end-column="48" />
+=======
+        <state relative-caret-position="375">
+          <caret line="46" column="10" lean-forward="true" selection-start-line="46" selection-start-column="10" selection-end-line="46" selection-end-column="10" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#template#0;n#el-collapse-item#0;n#el-collapse#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#template#0;n#el-collapse-item#0;n#el-collapse#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#template#0;n#el-collapse-item#0;n#el-collapse#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#3;n#template#0;n#el-collapse-item#0;n#el-collapse#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#4;n#template#0;n#el-collapse-item#0;n#el-collapse#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#el-collapse-item#0;n#el-collapse#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#3;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#4;n#div#0;n#!!top" expanded="true" />
+          </folding>
+>>>>>>> f7c73a778895e053d46d50315768be83104b876f
         </state>
       </provider>
     </entry>

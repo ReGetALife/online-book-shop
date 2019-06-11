@@ -8,7 +8,9 @@ layui 框架已经在源码里了，不用再另行安装。
 
 api 统一返回 ResponseEntity，并设置恰当的状态码。
 
-eureka服务注册和发现 [http://localhost:8761](http://localhost:8761)
+eureka 服务注册和发现 [http://139.199.75.41:8761](http://139.199.75.41:8761)
+
+api 线上网关 [http://139.199.75.41:8085/](http://139.199.75.41:8085/)
 
 ## references
 

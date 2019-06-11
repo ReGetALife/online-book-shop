@@ -24,6 +24,12 @@ public class AccountGatewayFilter implements GatewayFilter {
         ServerHttpRequest request = exchange.getRequest();
         HttpHeaders headers = request.getHeaders();
 
+        //假如是新建账户，则不鉴权
+        //System.out.println(request.getMethod().toString()+request.getPath().toString());
+        if(request.getMethod() != null && request.getMethod().toString().equals("POST") && request.getPath().toString().equals("/accounts")){
+            return chain.filter(exchange);
+        }
+        //从头部或请求参数获取uid和token
         String token = headers.getFirst(AUTHORIZE_TOKEN);
         String uid = headers.getFirst(AUTHORIZE_UID);
         if (token == null) {
@@ -33,6 +39,7 @@ public class AccountGatewayFilter implements GatewayFilter {
             uid = request.getQueryParams().getFirst(AUTHORIZE_UID);
         }
 
+        //没有找到uid或token
         ServerHttpResponse response = exchange.getResponse();
         if (StringUtils.isEmpty(token) || StringUtils.isEmpty(uid)) {
             response.setStatusCode(HttpStatus.UNAUTHORIZED);
@@ -40,12 +47,14 @@ public class AccountGatewayFilter implements GatewayFilter {
         }
 
 
+        //token不匹配
         Token authToken = mongoTemplate.findById(uid,Token.class);
         if (authToken == null || !authToken.getToken().equals(token)) {
             response.setStatusCode(HttpStatus.UNAUTHORIZED);
             return response.setComplete();
         }
 
+        //成功鉴权
         return chain.filter(exchange);
     }
 }

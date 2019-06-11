@@ -3,16 +3,12 @@ package com.onlinebookshop.account;
 import org.bson.types.ObjectId;
 import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
-import org.springframework.http.RequestEntity;
 import org.springframework.http.ResponseEntity;
 import org.springframework.util.DigestUtils;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import javax.servlet.http.HttpServletResponse;
-import javax.validation.Valid;
-import java.io.IOException;
 import java.util.*;
 
 import static org.springframework.web.bind.annotation.RequestMethod.*;
