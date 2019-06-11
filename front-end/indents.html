@@ -33,10 +33,10 @@
                 <div style="width:10%;text-align: center">{{item.state}}</div>
                 <div style="width:25%;text-align: center">{{item.time_stamp}}</div>
                 <div style="width:20%;text-align: center">
-                    <el-button @click="opendelete(item.indent_id)" size="mini" type="primary"  round>删除订单</el-button>
-                    <el-button @click="opencancle(item.indent_id)" size="mini" type="primary" round disabled>取消订单</el-button><br>
-                    <el-button @click="openconfirm(item.indent_id)" size="mini" type="primary" round>确认收货</el-button>
-                    <el-button @click="openpay(item.indent_id)" size="mini" type="primary" round>支付订单</el-button>
+                    <el-button @click="opendelete(item.indent_id)" size="mini" type="primary"  round>删除订单</el-button><br>
+                    <el-button @click="opencancle(item.indent_id)" size="mini" type="primary" round>取消订单</el-button><br>
+                    <el-button @click="openconfirm(item.indent_id)" v-if="item.state==1" size="mini" type="primary" round>确认收货</el-button>
+                    <el-button @click="openpay(item.indent_id)" v-if="item.state==0" size="mini" type="primary" round>支付订单</el-button>
                 </div>
             </template>
             <div style="width: 90%;margin:0 auto 0 auto">
