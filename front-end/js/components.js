@@ -298,8 +298,8 @@ Vue.component('attrname',{
     <div id="attrtop">
     <div style="width:20%;float:left;text-align: center">订单ID</div>
     <div style="width:15%;float:left;text-align: center">总价格</div>
-    <div style="width:10%;float:left;text-align: center">订单状态</div>
-    <div style="width:20%;float:left;text-align: center">交易时间</div>
+    <div style="width:11%;float:left;text-align: center">订单状态</div>
+    <div style="width:22%;float:left;text-align: center">交易时间</div>
     <div style="width:20%;float:left;text-align: center">操作</div>
 </div>
     `
