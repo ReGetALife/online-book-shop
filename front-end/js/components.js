@@ -273,15 +273,21 @@ Vue.component('indents', {
       <div style="width:20%;text-align: center">订单ID:{{10000001}}</div>
       <div style="width:15%;text-align: center">{{100.00}}</div>
       <div style="width:10%;text-align: center">{{0}}</div>
-      <div style="width:21%;text-align: center">2019-06-06 15:00</div>
+      <div style="width:25%;text-align: center">2019-06-06 15:00</div>
       <div style="width:20%;text-align: center">
-      <el-button size="mini" type="primary" round>删除订单</el-button><br>
+      <el-button size="mini" type="primary" round>删除订单</el-button>
       <el-button size="mini" type="primary" round disabled>取消订单</el-button><br>
       <el-button size="mini" type="primary" round>确认收货</el-button>
-      </div>
+      <el-button size="mini" type="primary" round>支付订单</el-button>
+      </div> 
     </template>
-    <div style="height: 90px;width: 90%;margin:0 auto 0 auto">
-    <img width="72px" height="90px" src="./res/default.png">x1
+    <div style="width: 90%;margin:0 auto 0 auto">
+    <div v-for="books in 3" class="indent-books">
+     <img src="./res/default.png">
+     <div class="book-price">单价{{10}}</div>
+     <div class="book-count">数量{{3}}</div>
+     <div class="all-price">金额{{30}}</div>
+</div>
 </div>
   </el-collapse-item>
   </el-collapse>
