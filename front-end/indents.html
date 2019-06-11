@@ -18,14 +18,43 @@
 </div>
 <div id="mains">
     <h1 id="myindent">我的订单</h1>
-    <attrname></attrname>
-    <indents></indents>
-    <el-pagination id="page"
+    <div id="attrtop">
+        <div style="width:20%;float:left;text-align: center">订单ID</div>
+        <div style="width:15%;float:left;text-align: center">总价格</div>
+        <div style="width:11%;float:left;text-align: center">订单状态</div>
+        <div style="width:22%;float:left;text-align: center">交易时间</div>
+        <div style="width:20%;float:left;text-align: center">操作</div>
+    </div>
+    <el-collapse accordion>
+        <el-collapse-item v-for="item in data1">
+            <template slot="title">
+                <div style="width:20%;text-align: center">订单ID:{{item.indent_id}}</div>
+                <div style="width:15%;text-align: center">{{item.total_price}}</div>
+                <div style="width:10%;text-align: center">{{item.state}}</div>
+                <div style="width:25%;text-align: center">{{item.time_stamp}}</div>
+                <div style="width:20%;text-align: center">
+                    <el-button @click="opendelete(item.indent_id)" size="mini" type="primary"  round>删除订单</el-button>
+                    <el-button @click="opencancle(item.indent_id)" size="mini" type="primary" round disabled>取消订单</el-button><br>
+                    <el-button @click="openconfirm(item.indent_id)" size="mini" type="primary" round>确认收货</el-button>
+                    <el-button @click="openpay(item.indent_id)" size="mini" type="primary" round>支付订单</el-button>
+                </div>
+            </template>
+            <div style="width: 90%;margin:0 auto 0 auto">
+                <div v-for="books in item.books" class="indent-books">
+                    <img src="./res/default.png">
+                    <div class="book-price">单价{{books.book_price}}</div>
+                    <div class="book-count">数量{{books.book_num}}</div>
+                    <div class="all-price">金额{{books.books_price}}</div>
+                </div>
+            </div>
+        </el-collapse-item>
+    </el-collapse>
+    <!--<el-pagination id="page"
             background
             :page-count=11
             :pager-count="6"
             layout="prev, pager, next">
-    </el-pagination>
+    </el-pagination>-->
 </div>
 
 
