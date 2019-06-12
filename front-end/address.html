@@ -3,8 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <title>我的收货地址</title>
+    <script src="https://unpkg.com/jquery@3.4.1/dist/jquery.min.js"></script>
+    <script src="https://unpkg.com/js-cookie@2.2.0/src/js.cookie.js"></script>
+    <script src="https://unpkg.com/vue@2.6.10/dist/vue.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/element-ui@2.9.1/lib/theme-chalk/index.css">
+    <script src="https://unpkg.com/element-ui@2.9.1/lib/index.js"></script>
+    <link rel="stylesheet" href="./css/components.css">
+    <script src="./js/components.js"></script>
 </head>
 <body>
-
+<div id="top">
+    <p-title :post="post"></p-title>
+</div>
+<script>
+    new Vue({
+        el: '#top',
+        data: {
+            post: {
+                activeIndex: '1000-3'
+            }
+        }
+    })
+</script>
 </body>
 </html>

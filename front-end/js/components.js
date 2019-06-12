@@ -230,7 +230,7 @@
     <div id="title">
         <el-menu :default-active="activeIndex" mode="horizontal" @select="handleSelect"
                  background-color="#303133" text-color="#fff" active-text-color="#ffd04b">
-            <el-menu-item index="0"><img class="icon" src="./res/icon.png" /><a class="title-name" @click="tiaozhuan('index.html')">虚拟书店</a></el-menu-item>
+            <el-menu-item index="0"  @click="tiaozhuan('index.html')"><img class="icon" src="./res/icon.png" /><a class="title-name">虚拟书店</a></el-menu-item>
             <el-submenu index="1000" class="title-selection">
             
                 <template slot="title">

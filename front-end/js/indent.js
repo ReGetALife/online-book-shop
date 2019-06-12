@@ -2,7 +2,7 @@
     el: '.title_container',
     data: {
         post: {
-            activeIndex: '0'
+            activeIndex: '2'
         }
     }
 })
