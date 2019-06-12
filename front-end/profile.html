@@ -18,37 +18,7 @@
         <p-title :post="post"></p-title>
     </div>
     <div id="content" >
-        <el-card class="box-card">
-            <div slot="header" class="clearfix" style="font-size: 20px;">
-                <span>我的个人信息</span>
-            </div>
-            <div class="item">
-                <el-image style="width: 100px; height: 100px"
-                    src="https://fuss10.elemecdn.com/e/5d/4a731a90594a4af544c0c25941171jpeg.jpeg" fit="cover">
-                </el-image>
-            </div>
-            <div class="text item" style="font-size: 16px;">
-                用户昵称:&nbsp;
-                <span id="name" v-if="!isChangingName">{{name}}&nbsp;&nbsp;&nbsp;&nbsp;<el-button plain @click="isChangingName=true">修改</el-button></span>
-                <span id="changeName" v-else>
-                    <el-input v-model="newName" placeholder="请输入内容" ></el-input>
-                    <el-button type="primary" plain>确定</el-button>
-                    <el-button @click="isChangingName=false" plain>取消</el-button>
-                </span>
-            </div>
-            <div class="text item" style="font-size: 16px;">
-                密码&nbsp;&nbsp;&nbsp;&nbsp;
-                <span v-if="!isChangingPass"><el-button plain @click="isChangingPass=true">修改</el-button></span>
-                <span v-else>
-                    <el-input v-model="newPass" placeholder="请输入内容" ></el-input>
-                    <el-button type="primary" plain>确定</el-button>
-                    <el-button @click="isChangingPass=false" plain>取消</el-button>
-                </span>
-            </div>
-            <div class="text item" style="font-size: 16px;">
-                绑定手机:&nbsp;<span id="phone">{{phone}}</span>
-            </div>
-        </el-card>
+        <mycontent></mycontent>
     </div>
     <script src="./js/profile.js"></script>
 </body>

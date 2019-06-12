@@ -20,93 +20,106 @@ public class AccountController {
     private MongoTemplate mongoTemplate;
 
     //获取所有账户信息
-    @RequestMapping(value="/accounts",method=GET)
+    @RequestMapping(value = "/accounts", method = GET)
     @ResponseBody
     public List<Account> allAccount() {
         return mongoTemplate.findAll(Account.class);
     }
+
     //新建一个账户
-    @RequestMapping(value="/accounts",method=POST)
+    @RequestMapping(value = "/accounts", method = POST)
     @ResponseBody
     public ResponseEntity<Account> addAccount(@RequestBody Account account) {
-        Account newAccount=null;
-        if(mongoTemplate.find(Query.query(Criteria.where("phone").is(account.getPhone())),Account.class).isEmpty()){
-            newAccount=new Account();
+        Account newAccount = null;
+        if (mongoTemplate.find(Query.query(Criteria.where("phone").is(account.getPhone())), Account.class).isEmpty()) {
+            newAccount = new Account();
             newAccount.setAccountId(new ObjectId().toString());
             newAccount.setAccountName(account.getAccountName());
             newAccount.setAvatar(account.getAvatar());
             newAccount.setPassword(DigestUtils.md5DigestAsHex(account.getPassword().getBytes()));
             newAccount.setPhone(account.getPhone());
             return ResponseEntity.ok(mongoTemplate.insert(newAccount));
-        }
-        else {
+        } else {
             return ResponseEntity.status(409).body(newAccount);
         }
     }
+
     //查询某个账户
-    @RequestMapping(value = "/accounts/{accountId}",method = GET)
+    @RequestMapping(value = "/accounts/{accountId}", method = GET)
     @ResponseBody
-    public ResponseEntity<Account> getAccount(@PathVariable String accountId){
-        Account newAccount=mongoTemplate.findById(accountId,Account.class);
-        if(newAccount==null){
+    public ResponseEntity<Account> getAccount(@PathVariable String accountId) {
+        Account newAccount = mongoTemplate.findById(accountId, Account.class);
+        if (newAccount == null) {
             return ResponseEntity.status(404).body(newAccount);
-        }
-        else {
+        } else {
             return ResponseEntity.ok(newAccount);
         }
     }
+
     //修改某个账户
-    @RequestMapping(value = "/accounts/{accountId}",method = PUT)
+    @RequestMapping(value = "/accounts/{accountId}", method = PUT)
     @ResponseBody
-    public ResponseEntity<Account> updateAccount(@RequestBody Account account,@PathVariable String accountId){
+    public ResponseEntity<Account> updateAccount(@RequestBody Account account, @PathVariable String accountId) {
         Account updatedAccount = null;
-        Account oldAccount = mongoTemplate.findById(accountId,Account.class);
-        if(oldAccount==null){
+        Account oldAccount = mongoTemplate.findById(accountId, Account.class);
+        if (oldAccount == null) {
             return ResponseEntity.status(404).body(updatedAccount);
-        }
-        else if(account.getPhone()!=null&&!account.getPhone().equals(oldAccount.getPhone())){
+        } else if (account.getPhone() != null && !account.getPhone().equals(oldAccount.getPhone())) {
             //不允许修改手机号
             return ResponseEntity.status(409).body(updatedAccount);
-        }
-        else{
+        } else {
             account.setAccountId(accountId);
-            account.setPassword(DigestUtils.md5DigestAsHex(account.getPassword().getBytes()));
+            account.setPhone(oldAccount.getPhone());
+
+            if (account.getPassword() == null || account.getPassword().equals("")) {
+                account.setPassword(oldAccount.getPassword());
+            } else {
+                account.setPassword(DigestUtils.md5DigestAsHex(account.getPassword().getBytes()));
+            }
+            if (account.getAccountName() == null || account.getAccountName().equals("")) {
+                account.setAccountName(oldAccount.getAccountName());
+            }
+            if (account.getAvatar() == null || account.getAvatar().equals("")) {
+                account.setAvatar(oldAccount.getAvatar());
+            }
             updatedAccount = mongoTemplate.save(account);
             return ResponseEntity.ok(updatedAccount);
         }
     }
+
     //登录获取token
-    @RequestMapping(value = "/tokens",method = POST)
+    @RequestMapping(value = "/tokens", method = POST)
     @ResponseBody
-    public ResponseEntity<Token> createToken(@RequestBody Map<String, String> authInfo){
-        Token token=null;
-        Account account = mongoTemplate.findOne(Query.query(Criteria.where("phone").is(authInfo.get("phone"))),Account.class);
-        if(account==null){
+    public ResponseEntity<Token> createToken(@RequestBody Map<String, String> authInfo) {
+        Token token = null;
+        Account account = mongoTemplate.findOne(Query.query(Criteria.where("phone").is(authInfo.get("phone"))), Account.class);
+        if (account == null) {
             return ResponseEntity.status(404).body(token);
         }
-        if(!account.getPassword().equals(DigestUtils.md5DigestAsHex(authInfo.get("password").getBytes()))){
+        if (!account.getPassword().equals(DigestUtils.md5DigestAsHex(authInfo.get("password").getBytes()))) {
             return ResponseEntity.status(401).body(token);
         }
         String salt = random(5); //生成几位的盐
-        String saltyPassword=salt+authInfo.get("password");
-        token=new Token();
+        String saltyPassword = salt + authInfo.get("password");
+        token = new Token();
         token.setUid(account.getAccountId());
         token.setToken(DigestUtils.md5DigestAsHex(saltyPassword.getBytes()));
         //设置过期时间。mongodb已经通过db.token.createIndex({"expireTime": 1},{"expireAfterSeconds":0});设置了ttl索引。
-        Date nowTime=new Date();
-        Calendar calendar=Calendar.getInstance();
+        Date nowTime = new Date();
+        Calendar calendar = Calendar.getInstance();
         calendar.setTime(nowTime);
-        calendar.add(Calendar.HOUR,12);//十二小时后过期
+        calendar.add(Calendar.HOUR, 12);//十二小时后过期
         token.setExpireTime(calendar.getTime());
 
         return ResponseEntity.ok(mongoTemplate.save(token));
     }
+
     // 盐生成方法
-    private String random(Integer mu){
+    private String random(Integer mu) {
         Random random = new Random();
         String chars = "qazwsxedcrfvtgbyhnujmikolp";
         String returns = "";
-        for(int i = 0 ; i < mu ;i ++ ){
+        for (int i = 0; i < mu; i++) {
             returns += chars.charAt(random.nextInt(chars.length()));
         }
         return returns;

@@ -238,8 +238,8 @@
                 </template>
                 <template v-if="isLogin()">
                 <el-menu-item index="1000-1" @click="tiaozhuan('profile.html')">{{accountName}}</el-menu-item>
-                <el-menu-item index="1000-2">消息通知</el-menu-item>
-                <el-menu-item index="1000-3">账户设置</el-menu-item>
+                <el-menu-item index="1000-2" @click="tiaozhuan('notification.html')">消息通知</el-menu-item>
+                <el-menu-item index="1000-3" @click="tiaozhuan('address.html')">收货地址</el-menu-item>
                 <el-menu-item index="1000-4" @click="logout()">退出登录</el-menu-item>
                 </template>
                 <template v-if="!isLogin()">
@@ -247,7 +247,7 @@
                 <el-menu-item index="1000-6" @click="RegistryDialogVisible = true">注册</el-menu-item>
                 </template>
             </el-submenu>
-            <el-menu-item index="1" class="title-selection">购物车</el-menu-item>
+            <el-menu-item index="1" class="title-selection" @click="tiaozhuan('trolley.html')">购物车</el-menu-item>
             <el-menu-item index="2" class="title-selection" @click="tiaozhuan('indent.html')">我的订单</el-menu-item>
             <el-input placeholder="请输入内容" v-model="search_input" class="input-with-select">
                 <el-button slot="append" icon="el-icon-search" v-on:click="handleSelect"></el-button>
