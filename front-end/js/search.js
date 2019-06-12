@@ -15,18 +15,15 @@ new Vue({
 new Vue({
     el: '.search_list',
     data: {
-        post: {
-            list_res: $.ajax({ url: "http://139.199.75.41:3000/mock/11/new_book", async: false }).responseJSON.res
-        },
+        list_res: $.ajax({ url: "http://139.199.75.41:3000/mock/11/new_book", async: false }).responseJSON.res,
         currentPage: 1
     },
     computed: {
         showList() {
-            console.log(this.post.list_res)
-            return this.post.list_res;
+            return this.list_res;
         },
         count() {
-            return eval(this.post.list_res).length;
+            return eval(this.list_res).length;
         }
     },
     methods: {
