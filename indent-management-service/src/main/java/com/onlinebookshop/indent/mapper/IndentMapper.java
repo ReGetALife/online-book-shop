@@ -24,13 +24,26 @@ public interface IndentMapper {
 
     //添加购物车
     @Insert("insert into shopping_cart(account_id,book_id) values (#{account_id},#{book_id})")
-    Boolean insertShopping(ShoppingCart shoppingcart);
+    Boolean insertShopping(ShoppingCart shoppingCart);
 
     //查看个人购物车
     @Select("select book_id from shopping_cart where account_id=#{account_id}")
-    List<ShoppingCart> getShoppingCart(@Param(value = "account_id")Long account_id);
+    List<Long> getShoppingCart(@Param(value = "account_id")String account_id);
 
     //删除购物车中书籍
     @Delete("delete from shopping_cart where account_id=#{account_id} and book_id=#{book_id}")
-    Boolean deleteShopping(ShoppingCart shoppingcart);
+    Boolean deleteShopping(ShoppingCart shoppingCart);
+
+    //新建订单
+    @Insert("insert into indent(account_id,amount,time_stamp,state) values (#{account_id},#{amount},#{time_stamp},#{state})")
+    Boolean insertIndent(Indent indent);
+
+    //插入订单书籍表
+    @Insert("insert into indent_book(indent_id,book_id,price) values(#{indent_id},#{book_id},#{price})")
+    void insertInBook(IndentBook indentBook);
+
+    //获得新插入订单ID
+    @Select("select LAST_INSERT_ID()")
+    Long getIndentId();
+
 }
